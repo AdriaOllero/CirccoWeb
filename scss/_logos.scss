@@ -1,0 +1,32 @@
+.logos-main-container {
+  .logos-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .logos-content {
+      width: 100%;
+      .logos-item {
+        padding-block: 32px;
+        .row {
+          justify-content: space-between;
+
+          .logo-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            height: 200px;
+            img {
+              width: auto;
+              opacity: 0.65;
+            }
+          }
+        }
+
+        &:first-child {
+          border-bottom: 1px solid $gray-color;
+        }
+      }
+    }
+  }
+}

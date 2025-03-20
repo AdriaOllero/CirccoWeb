@@ -1,0 +1,147 @@
+//COLORS
+$primary-color: #4c4bfb;
+$secondary-color: #46f37d;
+$white-color: #ffffff;
+$black-color: #070707;
+$gray-color: #4d4d4d;
+
+// FONTS
+$font: "Lay Grotesk", Helvetica, sans-serif;
+
+/// CONFIG
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  background-color: $black-color;
+}
+
+*,
+*,
+* {
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/// TEXT CONFIG
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+button,
+li,
+label,
+input,
+textarea,
+span,
+b,
+strong,
+small,
+table,
+tr,
+td {
+  font-family: $font;
+}
+
+/// TEXT ///
+
+.text-section-title {
+  font-size: 14px;
+  color: $white-color;
+  opacity: 0.65;
+}
+
+.text-small {
+  text-transform: uppercase;
+  color: $white-color;
+  font-size: clamp(16px, 1.042vw, 20px);
+  max-width: 60%;
+  margin-bottom: initial;
+}
+
+.text-large {
+  font-size: clamp(24px, 2.604vw, 50px);
+  margin-bottom: initial;
+  color: $white-color;
+}
+
+/// PADDINGS ///
+.gPadd {
+  padding-block: clamp(128px, 13.333vw, 256px);
+}
+
+/// CONTAINERS ///
+.main-container {
+  max-width: 95vw;
+  margin: 0 auto;
+}
+
+/// NO SCROLL ///
+.no-scroll {
+  overflow: hidden;
+}
+
+/// BUTTONS
+
+.link {
+  color: $primary-color;
+  text-decoration: none;
+  transition: 300ms all;
+  color: $white-color;
+  text-transform: uppercase;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.cover-link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+
+///// CURSOR /////
+#cursor {
+  position: fixed;
+  top: -5px;
+  left: -5px;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 999;
+}
+
+#cursor-border {
+  --size: 15px;
+  position: fixed;
+  top: calc(var(--size) / -2);
+  left: calc(var(--size) / -2);
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background-color: white;
+  // mix-blend-mode: difference;
+  pointer-events: none;
+  transition: top 0.15s ease-out, left 0.15s ease-out, width 0.15s ease-out,
+  height 0.15s ease-out, background-color 0.15s ease-out;
+  z-index: 9999;
+}
+
+@media only screen and (max-width: 1080px) {
+  .main-container {
+    max-width: 90vw;
+  }
+}

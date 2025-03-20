@@ -1,0 +1,33 @@
+.newsletter-main-container {
+    overflow: hidden;
+  .newsletter-container {
+    .row {
+      justify-content: end;
+
+      .newsletter-item {
+        p {
+        }
+        a {
+          text-decoration: none;
+          display: flex;
+          align-items: start;
+          padding: 0px 48px 24px 0px;
+          color: $white-color;
+          text-transform: uppercase;
+          border-bottom: 1px solid $gray-color;
+          font-size: clamp(64px, 5.729vw, 110px);
+          img{
+            padding-left: 24px;
+            transition: 300ms all;
+          }
+
+          &:hover{
+            img{
+                transform: translateX(16px) translateY(-16px);
+            }
+          }
+        }
+      }
+    }
+  }
+}

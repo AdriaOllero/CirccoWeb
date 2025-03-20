@@ -1,0 +1,37 @@
+.titleProyects-main-container {
+    border-bottom: 1px solid $gray-color;
+  .titleProyects-container {
+    .row {
+      justify-content: center;
+      .titleProyects-title {
+        display: flex;
+        align-items: center;
+        font-size: clamp(64px, 10.417vw, 200px);
+        color: $white-color;
+        line-height: clamp(64px, 10.417vw, 200px);
+
+        a {
+          padding: 24px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          video {
+            padding-right: 24px;
+            border-radius: 24px;
+          }
+        }
+      }
+    }
+
+    .bottom-main-container {
+      padding-bottom: clamp(32px, 3.333vw, 64px);
+      .bottom-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .bottom-item {
+        }
+      }
+    }
+  }
+}
