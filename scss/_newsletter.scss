@@ -1,5 +1,8 @@
 .newsletter-main-container {
-    overflow: hidden;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+  background-color: $black-color;
   .newsletter-container {
     .row {
       justify-content: end;
@@ -16,14 +19,16 @@
           text-transform: uppercase;
           border-bottom: 1px solid $gray-color;
           font-size: clamp(64px, 5.729vw, 110px);
-          img{
+          img {
             padding-left: 24px;
-            transition: 300ms all;
+            transition: 600ms all;
+            opacity: 1;
           }
 
-          &:hover{
-            img{
-                transform: translateX(16px) translateY(-16px);
+          &:hover {
+            img {
+              opacity: 0;
+              transform: translateX(16px) translateY(-16px);
             }
           }
         }

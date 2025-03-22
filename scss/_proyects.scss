@@ -1,0 +1,60 @@
+.proyectos-main-container {
+  .rotate-container {
+    transform: rotate(10deg);
+    .proyectos-container {
+      display: flex;
+      align-items: center;
+
+      .proyectos-item {
+        margin: 32px;
+        position: relative;
+        cursor: pointer;
+        .proyectos-image {
+          width: auto;
+          height: 60vh;
+          position: relative;
+          transition: 300ms all;
+          z-index: 1;
+        }
+        .proyecto-content {
+          position: absolute;
+          z-index: 2;
+          bottom: 124px;
+          left: 124px;
+          h3 {
+            color: $white-color;
+            transform: translateY(-10px);
+            opacity: 0;
+            transition: 300ms all;
+            font-size: 86px;
+          }
+          a {
+            margin-top: 64px;
+            display: flex;
+            font-size: 24px;
+            text-transform: uppercase;
+            color: $white-color;
+            opacity: 0;
+            transition: 300ms all;
+            transform: translateY(-10px);
+          }
+        }
+        &:hover {
+          .proyectos-image {
+            opacity: 0.25;
+          }
+          .proyecto-content {
+            h3 {
+              opacity: 1;
+              transform: translateY(0);
+            }
+            a {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+        }
+      }
+    }
+  }
+}

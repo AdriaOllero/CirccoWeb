@@ -97,7 +97,13 @@ td {
   transition: 300ms all;
   color: $white-color;
   text-transform: uppercase;
+  img {
+    transition: 300ms all;
+  }
   &:hover {
+    img {
+      transform: scale(1.2) translateX(5px) translateY(-10px);
+    }
     text-decoration: underline;
   }
 }
@@ -136,7 +142,7 @@ td {
   // mix-blend-mode: difference;
   pointer-events: none;
   transition: top 0.15s ease-out, left 0.15s ease-out, width 0.15s ease-out,
-  height 0.15s ease-out, background-color 0.15s ease-out;
+    height 0.15s ease-out, background-color 0.15s ease-out;
   z-index: 9999;
 }
 

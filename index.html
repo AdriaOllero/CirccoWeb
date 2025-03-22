@@ -15,7 +15,7 @@
     />
 
     <style>
-      body{
+      body {
         overflow-x: hidden;
       }
     </style>
@@ -33,7 +33,12 @@
           <div class="navbar-item">
             <!--LOGO -->
             <div class="logo-container">
-              <a class="logo" href="/" title="Agencia Digital | Circco Media" data-cursor="pointer">
+              <a
+                class="logo"
+                href="/"
+                title="Agencia Digital | Circco Media"
+                data-cursor="pointer"
+              >
                 <!-- <img
                   src="/assets/svg/logo-text.svg"
                   alt="Agencia Digital | Circco Media"
@@ -104,7 +109,10 @@
                   alt="Works | Circco Media"
                   title="Works | Circco Media"
                 />
-                works
+                <div class="navbar-link-rotate">
+                  <span class="navbar-link-first">works</span>
+                  <span class="navbar-link-second">works</span>
+                </div>
               </a>
 
               <!-- SERVICES -->
@@ -119,7 +127,10 @@
                   alt="Services | Circco Media"
                   title="Services | Circco Media"
                 />
-                services
+                <div class="navbar-link-rotate">
+                  <span class="navbar-link-first">services</span>
+                  <span class="navbar-link-second">services</span>
+                </div>
               </a>
 
               <!-- ABOUT -->
@@ -130,7 +141,11 @@
                   alt="About | Circco Media"
                   title="About | Circco Media"
                 />
-                about
+
+                <div class="navbar-link-rotate">
+                  <span class="navbar-link-first">about</span>
+                  <span class="navbar-link-second">about</span>
+                </div>
               </a>
 
               <!-- CONTACT -->
@@ -145,7 +160,11 @@
                   alt="Contact | Circco Media"
                   title="Contact | Circco Media"
                 />
-                contact
+
+                <div class="navbar-link-rotate">
+                  <span class="navbar-link-first">contact</span>
+                  <span class="navbar-link-second">contact</span>
+                </div>
               </a>
             </div>
           </div>
@@ -158,10 +177,21 @@
       <!-- HERO -->
       <section>
         <div class="hero-main-container">
+          <img
+            class="bubble-left"
+            src="/assets/images/bubble-left.png"
+            alt=""
+          />
+          <img
+            class="bubble-right"
+            src="/assets/images/bubble-right.png"
+            alt=""
+          />
+
           <div class="hero-container main-container">
             <!-- MAIN TITLE -->
             <div class="main-title-container">
-              <div class="main-title">
+              <div class="main-title element" data-speed="25">
                 <h1>
                   humaniza <br />
                   tu marca.
@@ -235,7 +265,7 @@
             <div class="row">
               <div class="col-lg-4">
                 <!-- ABOUT ITEM -->
-                <div class="about-item">
+                <div class="about-item about-left">
                   <h2 class="text-section-title">sobre nosotros</h2>
                   <p class="text-small">
                     Damos vida a marcas que conectan, inspiran y dejan huella.
@@ -244,7 +274,7 @@
               </div>
               <div class="col-lg-8">
                 <!-- ABOUT ITEM -->
-                <div class="about-item">
+                <div class="about-item about-right">
                   <p class="text-large">
                     — Somos un equipo de expertos creativos que transforman
                     ideas en proyectos ganadores. Combinamos estrategia,
@@ -294,12 +324,12 @@
 
       <!-- TEXT SECTION -->
       <section>
-        <div class="text-main-section gPadd">
+        <div class="text-main-section gPadd" style="padding-block: 0px 256px">
           <div class="text-section main-container">
             <div class="row">
               <div class="col-lg-4"></div>
               <div class="col-lg-8">
-                <p class="text-large">
+                <p class="text-large video-right">
                   — Toda gran marca nace de una estrategia, crece con una
                   identidad y gana presencia digital a través de experiencias
                   interactivas y redes sociales.
@@ -329,6 +359,14 @@
                       href="/services"
                       title="Servicios | Circco Media"
                     >
+                      <img
+                        class="me-4"
+                        width="25"
+                        height="25"
+                        src="/assets/svg/arrow-color.svg"
+                        alt="Enviar email | Circco Media"
+                        title="Enviar email | Circco Media"
+                      />
                       VER TODOS LOS SERVICIOS
                     </a>
                   </div>
@@ -339,7 +377,10 @@
                   <!-- SERVICES LIST -->
                   <ul class="services-list">
                     <!-- ESTRATEGIA LINK -->
-                    <li class="services-link estrategia" data-cursor="pointer">
+                    <li
+                      class="services-link estrategia"
+                      data-cursor="servicePointer"
+                    >
                       <a
                         href="/services/estrategia"
                         title="Estrategia | Circco Media"
@@ -468,16 +509,15 @@
               <div class="col-lg-8">
                 <!-- CONTENT -->
                 <div class="title-proyects-content gPadd">
-                  <div class="titleProyects-title">Selección de</div>
-                  <div class="titleProyects-title">
+                  <div class="titleProyects-title seleccion">Selección de</div>
+                  <div class="titleProyects-title proyectos">
                     <a
                       href="/assets/videos/circcodesktop.mp4"
                       data-fancybox
                       title="Video presentación | Circco Media"
                     >
                       <video
-                      style="border-radius: 24px;"
-                      
+                        style="border-radius: 24px"
                         width="100%"
                         height="250"
                         playsinline
@@ -487,7 +527,10 @@
                         poster="/assets/images/video-cover.png"
                         title="Video presentación | Circco Media"
                       >
-                        <source src="/assets/videos/circcodesktop.mp4" type="video/mp4" />
+                        <source
+                          src="/assets/videos/circcodesktop.mp4"
+                          type="video/mp4"
+                        />
                         <source src="movie.webm" type="video/webm" />
                         Your browser does not support the video tag.
                       </video>
@@ -513,6 +556,14 @@
                     class="link"
                     title="Proyectos | Circco Media"
                   >
+                    <img
+                      class="me-4"
+                      width="25"
+                      height="25"
+                      src="/assets/svg/arrow-color.svg"
+                      alt="Enviar email | Circco Media"
+                      title="Enviar email | Circco Media"
+                    />
                     Ver todos los trabajos
                   </a>
                 </div>
@@ -525,22 +576,160 @@
       <!-- PROYECTOS -->
       <section>
         <div class="proyectos-main-container">
-          <div class="proyectos-container"></div>
+          <div class="rotate-container">
+            <div class="proyectos-container">
+              <!-- ITEM 1 -->
+              <div class="proyectos-item">
+                <img
+                  src="/assets/images/portfolio/portfolio-jordi.jpg"
+                  class="proyectos-image"
+                  alt="Jordimare | Circco Media"
+                  title="Jordimare | Circco Media"
+                />
+                <div class="proyecto-content">
+                  <h3>Jordimare</h3>
+                  <a
+                    class="link"
+                    href="/services"
+                    title="Servicios | Circco Media"
+                  >
+                    <img
+                      class="me-4"
+                      width="25"
+                      height="25"
+                      src="/assets/svg/arrow-color.svg"
+                      alt="Enviar email | Circco Media"
+                      title="Enviar email | Circco Media"
+                    />
+                    Ver proyecto
+                  </a>
+                </div>
+              </div>
+              <!-- ITEM 2 -->
+              <div class="proyectos-item">
+                <img
+                  class="proyectos-image"
+                  src="/assets/images/portfolio/portfolio-kilian.jpg"
+                  alt="Kilian | Circco Media"
+                  title="Kilian | Circco Media"
+                />
+                <div class="proyecto-content">
+                  <h3>Killian Technology</h3>
+                  <a
+                    class="link"
+                    href="/services"
+                    title="Servicios | Circco Media"
+                  >
+                    <img
+                      class="me-4"
+                      width="25"
+                      height="25"
+                      src="/assets/svg/arrow-color.svg"
+                      alt="Enviar email | Circco Media"
+                      title="Enviar email | Circco Media"
+                    />
+                    Ver proyecto
+                  </a>
+                </div>
+              </div>
+              <!-- ITEM 3 -->
+              <div class="proyectos-item">
+                <img
+                  src="/assets/images/portfolio/portfolio-iane.jpg"
+                  class="proyectos-image"
+                  alt="IANE | Circco Media"
+                  title="IANE | Circco Media"
+                />
+                <div class="proyecto-content">
+                  <h3>IANE <small>Wedding planner</small></h3>
+                  <a
+                    class="link"
+                    href="/services"
+                    title="Servicios | Circco Media"
+                  >
+                    <img
+                      class="me-4"
+                      width="25"
+                      height="25"
+                      src="/assets/svg/arrow-color.svg"
+                      alt="Enviar email | Circco Media"
+                      title="Enviar email | Circco Media"
+                    />
+                    Ver proyecto
+                  </a>
+                </div>
+              </div>
+              <!-- ITEM 4 -->
+              <div class="proyectos-item">
+                <img
+                  src="/assets/images/portfolio/portfolio-pacap.jpg"
+                  alt="Pacap | Circco Media"
+                  title="Pacap | Circco Media"
+                  class="proyectos-image"
+                />
+                <div class="proyecto-content">
+                  <h3>Pacap</h3>
+                  <a
+                    class="link"
+                    href="/services"
+                    title="Servicios | Circco Media"
+                  >
+                    <img
+                      class="me-4"
+                      width="25"
+                      height="25"
+                      src="/assets/svg/arrow-color.svg"
+                      alt="Enviar email | Circco Media"
+                      title="Enviar email | Circco Media"
+                    />
+                    Ver proyecto
+                  </a>
+                </div>
+              </div>
+              <!-- ITEM 5 -->
+              <div class="proyectos-item">
+                <img
+                  src="/assets/images/portfolio/portfolio-jordimare.jpg"
+                  alt="Jordimare | Circco Media"
+                  title="Jordimare | Circco Media"
+                  class="proyectos-image"
+                />
+                <div class="proyecto-content">
+                  <h3>Jordi</h3>
+                  <a
+                    class="link"
+                    href="/services"
+                    title="Servicios | Circco Media"
+                  >
+                    <img
+                      class="me-4"
+                      width="25"
+                      height="25"
+                      src="/assets/svg/arrow-color.svg"
+                      alt="Enviar email | Circco Media"
+                      title="Enviar email | Circco Media"
+                    />
+                    Ver proyecto
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       <!-- TEXT SECTION -->
       <section>
-        <div class="text-main-section gPadd">
+        <div class="text-main-section gPadd testimonios-section">
           <div class="text-section main-container">
             <div class="row">
-              <div class="col-lg-4">
+              <div class="col-lg-4 testimonios-left">
                 <h2 class="text-section-title">testimonios</h2>
                 <p class="text-small">
                   Hemos impulsado + de 100 empresas en los últimos 10 años
                 </p>
               </div>
-              <div class="col-lg-8">
+              <div class="col-lg-8 testimonios-right">
                 <p class="text-large">
                   — Crecemos junto a las marcas que confían en nosotros,
                   ayudándolas a evolucionar, diferenciarse y conectar con su
@@ -562,104 +751,104 @@
               <div class="logos-item">
                 <div class="row">
                   <!-- FONTVENTA -->
-                  <div class="col-lg-2">
-                    <div class="logo-item">
+                  <div class="col-lg-2" data-cursor="companyPointer">
+                    <a class="logo-item" href="javascript:void(0)">
                       <img
                         src="/assets/svg/logos/logo-fontventa.svg"
                         alt="Fontventa | Circco Media"
                         title="Fontventa | Circco Media"
                       />
-                    </div>
+                    </a>
                   </div>
                   <!-- MCFIT -->
-                  <div class="col-lg-2">
-                    <div class="logo-item">
+                  <div class="col-lg-2" data-cursor="companyPointer">
+                    <a class="logo-item" href="javascript:void(0)">
                       <img
                         src="/assets/svg/logos/logo-mcfit.svg"
                         alt="McFit | Circco Media"
                         title="McFit | Circco Media"
                       />
-                    </div>
+                    </a>
                   </div>
                   <!-- DOGHOUSE -->
-                  <div class="col-lg-2">
-                    <div class="logo-item">
+                  <div class="col-lg-2" data-cursor="companyPointer">
+                    <a class="logo-item" href="javascript:void(0)">
                       <img
                         src="/assets/svg/logos/logo-doghouse.svg"
                         alt="DogHouse | Circco Media"
                         title="DogHouse | Circco Media"
                       />
-                    </div>
+                    </a>
                   </div>
                   <!-- APLUS -->
-                  <div class="col-lg-2">
-                    <div class="logo-item">
+                  <div class="col-lg-2" data-cursor="companyPointer">
+                    <a class="logo-item" href="javascript:void(0)">
                       <img
                         src="/assets/svg/logos/logo-aplus.svg"
                         alt="Aplus | Circco Media"
                         title="Aplus | Circco Media"
                       />
-                    </div>
+                    </a>
                   </div>
                   <!-- RACO IBIZA -->
-                  <div class="col-lg-2">
-                    <div class="logo-item">
+                  <div class="col-lg-2" data-cursor="companyPointer">
+                    <a class="logo-item" href="javascript:void(0)">
                       <img
                         src="/assets/svg/logos/logo-raco.svg"
                         alt="Raco Ibiza | Circco Media"
                         title="Raco Ibiza | Circco Media"
                       />
-                    </div>
+                    </a>
                   </div>
                 </div>
               </div>
               <!-- SECOND LINE -->
               <div class="logos-item">
                 <div class="row">
-                  <div class="col-lg-2">
-                    <div class="logo-item">
+                  <div class="col-lg-2" data-cursor="companyPointer">
+                    <a class="logo-item" href="javascript:void(0)">
                       <img
                         src="/assets/svg/logos/logo-fontventa.svg"
                         alt="Fontventa | Circco Media"
                         title="Fontventa | Circco Media"
                       />
-                    </div>
+                    </a>
                   </div>
-                  <div class="col-lg-2">
-                    <div class="logo-item">
+                  <div class="col-lg-2" data-cursor="companyPointer">
+                    <a class="logo-item" href="javascript:void(0)">
                       <img
                         src="/assets/svg/logos/logo-mcfit.svg"
                         alt="McFit | Circco Media"
                         title="McFit | Circco Media"
                       />
-                    </div>
+                    </a>
                   </div>
-                  <div class="col-lg-2">
-                    <div class="logo-item">
+                  <div class="col-lg-2" data-cursor="companyPointer">
+                    <a class="logo-item" href="javascript:void(0)">
                       <img
                         src="/assets/svg/logos/logo-doghouse.svg"
                         alt="DogHouse | Circco Media"
                         title="DogHouse | Circco Media"
                       />
-                    </div>
+                    </a>
                   </div>
-                  <div class="col-lg-2">
-                    <div class="logo-item">
+                  <div class="col-lg-2" data-cursor="companyPointer">
+                    <a class="logo-item" href="javascript:void(0)">
                       <img
                         src="/assets/svg/logos/logo-aplus.svg"
                         alt="Aplus | Circco Media"
                         title="Aplus | Circco Media"
                       />
-                    </div>
+                    </a>
                   </div>
-                  <div class="col-lg-2">
-                    <div class="logo-item">
+                  <div class="col-lg-2" data-cursor="companyPointer">
+                    <a class="logo-item" href="javascript:void(0)">
                       <img
                         src="/assets/svg/logos/logo-raco.svg"
                         alt="Raco Ibiza | Circco Media"
                         title="Raco Ibiza | Circco Media"
                       />
-                    </div>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -680,6 +869,7 @@
                     Una agencia DÓNDE <br />LAS MARCAS COBRAN VIDA 🤍
                   </p>
                   <a
+                    data-cursor="newsletterPointer"
                     href="mailto:hola@circcomedia.com"
                     title="Enviar email | Circco Media"
                   >
@@ -699,7 +889,8 @@
       </section>
     </main>
 
-    <footer>
+    <!-- FOOTER -->
+    <footer class="footer-wrapper">
       <div class="footer-main-container">
         <!-- FOOTER CONTAINER -->
         <div class="footer-container main-container">

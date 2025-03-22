@@ -1,10 +1,37 @@
 .hero-main-container {
+  position: relative;
+
+  .bubble-right,
+  .bubble-left {
+    position: absolute;
+    opacity: 0.25;
+    z-index: 1;
+    animation: float 5s ease-in-out infinite;
+  }
+
+  .bubble-right {
+    right: -200px;
+    bottom: 50px;
+  }
+
+  .bubble-left {
+    left: 0;
+    bottom: 0px;
+  }
+
+  /* Variación de tiempo para que no se muevan igual */
+  .bubble-left {
+    animation-duration: 6s;
+  }
+
   .hero-container {
     width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: end;
+    z-index: 2;
+    position: relative;
 
     .main-title-container {
       display: flex;
@@ -58,7 +85,7 @@
                 text-wrap: nowrap;
                 text-transform: uppercase;
                 transition: 300ms all;
-                &:hover{
+                &:hover {
                   background-color: $white-color;
                   color: $black-color;
                 }
@@ -167,5 +194,17 @@
         }
       }
     }
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(-30px) translateX(10px);
+  }
+  100% {
+    transform: translateY(0) translateX(0);
   }
 }

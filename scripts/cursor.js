@@ -49,7 +49,55 @@ document.querySelectorAll("[data-cursor]").forEach((item) => {
       cursorBorder.style.backgroundImage = "url(/assets/svg/play-button.svg)";
       //cursorBorder.style.boxShadow = "none";
       //cursorBorder.style.backgroundSize = "cover";
+    }
 
+    if (item.dataset.cursor === "servicePointer") {
+      cursorBorder.style.mixBlendMode = "initial";
+      cursorBorder.style.backgroundColor = "transparent";
+      cursorBorder.style.borderRadius = "initial";
+      cursorBorder.style.setProperty("--size", "200px");
+      cursorBorder.style.display = "flex";
+
+      // Verificar si el video ya existe
+      if (!cursorBorder.querySelector("video")) {
+        // Crear el elemento video solo si no existe
+        const video = document.createElement("video");
+        video.src = "/assets/videos/circcodesktop.mp4"; // Ruta del video
+        video.autoplay = true;
+        video.loop = true;
+        video.muted = true;
+        video.style.width = "100%";
+        video.style.height = "100%";
+        video.style.objectFit = "cover";
+        video.style.borderRadius = "inherit"; // Mantener la forma si cambia
+
+        // Agregar el video al cursorBorder
+        cursorBorder.appendChild(video);
+      }
+    }
+
+    if (item.dataset.cursor === "companyPointer") {
+      cursorBorder.style.mixBlendMode = "initial";
+      cursorBorder.style.backgroundColor = "transparent";
+      cursorBorder.style.borderRadius = "initial";
+      cursorBorder.style.setProperty("--size", "50px");
+      cursorBorder.style.backgroundRepeat = "no-repeat";
+      cursorBorder.style.display = "flex";
+      cursorBorder.style.backgroundImage = "url(/assets/svg/arrow-color.svg)";
+      //cursorBorder.style.boxShadow = "none";
+      //cursorBorder.style.backgroundSize = "cover";
+    }
+
+    if (item.dataset.cursor === "newsletterPointer") {
+      cursorBorder.style.mixBlendMode = "initial";
+      cursorBorder.style.backgroundColor = "transparent";
+      cursorBorder.style.borderRadius = "initial";
+      cursorBorder.style.setProperty("--size", "50px");
+      cursorBorder.style.backgroundRepeat = "no-repeat";
+      cursorBorder.style.display = "flex";
+      cursorBorder.style.backgroundImage = "url(/assets/svg/arrow-color.svg)";
+      //cursorBorder.style.boxShadow = "none";
+      //cursorBorder.style.backgroundSize = "cover";
     }
 
     if (item.dataset.cursor === "none") {
@@ -65,5 +113,7 @@ document.querySelectorAll("[data-cursor]").forEach((item) => {
     cursorBorder.style.borderRadius = "50%";
     cursorBorder.style.backgroundImage = "none";
     cursorBorder.style.setProperty("--size", "15px");
+    // Eliminar cualquier video previo para evitar duplicados
+    cursorBorder.innerHTML = "";
   });
 });

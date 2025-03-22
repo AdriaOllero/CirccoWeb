@@ -69,6 +69,35 @@ nav {
             .navbar-icon {
               margin-right: 12px;
             }
+
+            .navbar-link-rotate {
+              overflow-y: hidden;
+              display: flex;
+              flex-direction: column;
+              .navbar-link-first {
+                transform: translateY(18px);
+                opacity: 1;
+                transition: 300ms all;
+              }
+              .navbar-link-second {
+                opacity: 0;
+                transform: translateY(10px);
+                transition: 300ms all;
+              }
+            }
+
+            &:hover {
+              .navbar-link-rotate {
+                .navbar-link-first {
+                  transform: translateY(-10px);
+                  opacity: 0;
+                }
+                .navbar-link-second {
+                  opacity: 1;
+                  transform: translateY(-18px);
+                }
+              }
+            }
           }
         }
       }
