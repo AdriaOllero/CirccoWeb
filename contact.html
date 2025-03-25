@@ -177,37 +177,38 @@
       <section>
         <div class="contact-main-container">
           <div class="contact-container main-container gPadd">
-            <form method="POST" accept-charset="UTF-8" id="form">
-              <input type="email" name="email" placeholder="Your email" />
-              <input type="text" name="full-name" placeholder="Your name" />
-              <!-- add hidden Honeypot input to prevent spams -->
-              <input
-                type="hidden"
-                name="_gotcha"
-                style="display: none !important"
-              />
+            <form action="https://formsubmit.co/circcomedia@gmail.com" method="POST">
+              <input type="text" name="name" required />
+              <input type="email" name="email" required />
               <button type="submit">Send</button>
             </form>
 
+            <!-- <form method="POST" accept-charset="UTF-8" id="form">
+                <input type="email" name="email" placeholder="Your email">
+                <input type="text" name="full-name" placeholder="Your name">
+                <input type="hidden" name="_gotcha" style="display:none !important">
+                <button type="submit">Send</button>
+            </form>
+            
             <script>
-              const form = document.getElementById("form");
-              form.addEventListener("submit", formSubmit);
-
-              function formSubmit(e) {
-                e.preventDefault();
-                const formData = new FormData(e.target);
-
-                fetch("https://getform.io/f/ajjmqzga", {
-                  method: "POST",
-                  body: formData,
-                  headers: {
-                    Accept: "application/json",
-                  },
-                })
-                  .then((response) => console.log(response))
-                  .catch((error) => console.log(error));
-              }
-            </script>
+                const form = document.getElementById("form");
+                form.addEventListener("submit", formSubmit);
+            
+                function formSubmit(e) {
+                    e.preventDefault();
+                    const formData = new FormData(e.target);
+            
+                    fetch("https://getform.io/f/ajjmqzga", {
+                        method: "POST",
+                        body: formData,
+                        headers: {
+                            "Accept": "application/json",
+                        },
+                    })
+                    .then(response => console.log(response))
+                    .catch(error => console.log(error))
+                }
+            </script> -->
           </div>
         </div>
       </section>
