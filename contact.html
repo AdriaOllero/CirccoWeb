@@ -176,36 +176,21 @@
     <main>
       <section>
         <div class="contact-main-container">
-          <div class="contact-container">
-            <form id="contactForm">
+          <div class="contact-container main-container gPadd">
+            <form
+              action="https://formsubmit.co/coronadoadrianollero@gmail.com"
+              method="POST"
+            >
               <input type="text" name="name" placeholder="Name" required />
               <input type="email" name="email" placeholder="Email" required />
+              <input
+                type="hidden"
+                name="_next"
+                value="https://adriaollero.github.io/CirccoWeb"
+              />
+              <input type="hidden" name="_captcha" value="false" />
               <button type="submit">Send</button>
             </form>
-
-            <script>
-              document
-                .getElementById("contactForm")
-                .addEventListener("submit", async function (e) {
-                  e.preventDefault();
-                  let formData = new FormData(this);
-
-                  let response = await fetch(
-                    "https://formsubmit.co/coronadoadrianollero@gmail.com",
-                    {
-                      method: "POST",
-                      body: formData,
-                    }
-                  );
-
-                  if (response.ok) {
-                    alert("Mensaje enviado con éxito");
-                    this.reset();
-                  } else {
-                    alert("Hubo un error, intenta de nuevo");
-                  }
-                });
-            </script>
           </div>
         </div>
       </section>
