@@ -177,11 +177,47 @@
       <section>
         <div class="contact-main-container">
           <div class="contact-container main-container gPadd">
-            <form action="https://formsubmit.co/circcomedia@gmail.com" method="POST">
-              <input type="text" name="name" required />
-              <input type="email" name="email" required />
-              <button type="submit">Send</button>
+            <h2>Formulario de Contacto</h2>
+
+            <form id="contact-form">
+              <label for="name">Nombre:</label>
+              <input type="text" id="name" name="name" required /><br /><br />
+
+              <label for="email">Correo:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+              /><br /><br />
+
+              <label for="message">Mensaje:</label>
+              <textarea id="message" name="message" rows="4" required></textarea
+              ><br /><br />
+
+              <button type="submit">Enviar</button>
             </form>
+
+            <script>
+              document
+                .getElementById("contact-form")
+                .addEventListener("submit", function (event) {
+                  event.preventDefault(); // Evita que el formulario se envíe normalmente
+
+                  let name = document.getElementById("name").value;
+                  let email = document.getElementById("email").value;
+                  let message = document.getElementById("message").value;
+
+                  let subject = "Nuevo mensaje de contacto";
+                  let body = `Nombre: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMensaje:%0D%0A${message}`;
+
+                  let mailtoLink = `mailto:ejemplo@email.com?subject=${encodeURIComponent(
+                    subject
+                  )}&body=${body}`;
+
+                  window.location.href = mailtoLink;
+                });
+            </script>
 
             <!-- <form method="POST" accept-charset="UTF-8" id="form">
                 <input type="email" name="email" placeholder="Your email">
