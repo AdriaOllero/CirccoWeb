@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agencia Digital | Circco Media</title>
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="icon" href="./assets/svg/favicon.svg" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+
+    <style>
+      body {
+        overflow-x: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Cursor -->
+    <div id="cursor-border"></div>
+    <div class="d-none" id="cursor"></div>
+
+    <!-- NAVBAR -->
+    <nav>
+      <div class="navbar-main-container">
+        <div class="navbar-container main-container">
+          <!-- NAVBAR ITEM -->
+          <div class="navbar-item">
+            <!--LOGO -->
+            <div class="logo-container">
+              <a
+                class="logo"
+                href="/"
+                title="Agencia Digital | Circco Media"
+                data-cursor="pointer"
+              >
+                <!-- <img
+                  src="./assets/svg/logo-text.svg"
+                  alt="Agencia Digital | Circco Media"
+                  title="Agencia Digital | Circco Media"
+                /> -->
+
+                <img
+                  width="30"
+                  height="30"
+                  src="./assets/svg/letters/c.svg"
+                  alt="Agencia Digital | Circco Media"
+                  title="Agencia Digital | Circco Media"
+                />
+                <img
+                  width="15"
+                  height="30"
+                  src="./assets/svg/letters/i.svg"
+                  alt="Agencia Digital | Circco Media"
+                  title="Agencia Digital | Circco Media"
+                />
+                <img
+                  width="30"
+                  height="30"
+                  src="./assets/svg/letters/r.svg"
+                  alt="Agencia Digital | Circco Media"
+                  title="Agencia Digital | Circco Media"
+                />
+                <img
+                  style="margin-left: -4px"
+                  width="30"
+                  height="30"
+                  src="./assets/svg/letters/c.svg"
+                  alt="Agencia Digital | Circco Media"
+                  title="Agencia Digital | Circco Media"
+                />
+                <img
+                  width="30"
+                  height="30"
+                  src="./assets/svg/letters/c.svg"
+                  alt="Agencia Digital | Circco Media"
+                  title="Agencia Digital | Circco Media"
+                />
+                <img
+                  width="30"
+                  height="30"
+                  src="./assets/svg/letters/o.svg"
+                  alt="Agencia Digital | Circco Media"
+                  title="Agencia Digital | Circco Media"
+                />
+                <img
+                  width="10"
+                  height="10"
+                  src="./assets/svg/letters/point.svg"
+                  alt="Agencia Digital | Circco Media"
+                  title="Agencia Digital | Circco Media"
+                />
+              </a>
+            </div>
+          </div>
+          <!-- NAVBAR ITEM -->
+          <div class="navbar-item">
+            <div class="navbar-links-container">
+              <!-- WORKS -->
+              <a class="navbar-link" href="/works" title="Works | Circco Media">
+                <img
+                  class="navbar-icon"
+                  src="./assets/svg/navbar-icon.svg"
+                  alt="Works | Circco Media"
+                  title="Works | Circco Media"
+                />
+                <div class="navbar-link-rotate">
+                  <span class="navbar-link-first">works</span>
+                  <span class="navbar-link-second">works</span>
+                </div>
+              </a>
+
+              <!-- SERVICES -->
+              <a
+                class="navbar-link"
+                href="/services"
+                title="Services | Circco Media"
+              >
+                <img
+                  class="navbar-icon"
+                  src="./assets/svg/navbar-icon.svg"
+                  alt="Services | Circco Media"
+                  title="Services | Circco Media"
+                />
+                <div class="navbar-link-rotate">
+                  <span class="navbar-link-first">services</span>
+                  <span class="navbar-link-second">services</span>
+                </div>
+              </a>
+
+              <!-- ABOUT -->
+              <a class="navbar-link" href="/about" title="About | Circco Media">
+                <img
+                  class="navbar-icon"
+                  src="./assets/svg/navbar-icon.svg"
+                  alt="About | Circco Media"
+                  title="About | Circco Media"
+                />
+
+                <div class="navbar-link-rotate">
+                  <span class="navbar-link-first">about</span>
+                  <span class="navbar-link-second">about</span>
+                </div>
+              </a>
+
+              <!-- CONTACT -->
+              <a
+                class="navbar-link"
+                href="/contact"
+                title="Contact | Circco Media"
+              >
+                <img
+                  class="navbar-icon"
+                  src="./assets/svg/navbar-icon.svg"
+                  alt="Contact | Circco Media"
+                  title="Contact | Circco Media"
+                />
+
+                <div class="navbar-link-rotate">
+                  <span class="navbar-link-first">contact</span>
+                  <span class="navbar-link-second">contact</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- MAIN -->
+    <main>
+      <section>
+        <div class="contact-main-container">
+          <div class="contact-container">
+            <form id="contactForm">
+              <input type="text" name="name" placeholder="Name" required />
+              <input type="email" name="email" placeholder="Email" required />
+              <button type="submit">Send</button>
+            </form>
+
+            <script>
+              document
+                .getElementById("contactForm")
+                .addEventListener("submit", async function (e) {
+                  e.preventDefault();
+                  let formData = new FormData(this);
+
+                  let response = await fetch(
+                    "https://formsubmit.co/coronadoadrianollero@gmail.com",
+                    {
+                      method: "POST",
+                      body: formData,
+                    }
+                  );
+
+                  if (response.ok) {
+                    alert("Mensaje enviado con éxito");
+                    this.reset();
+                  } else {
+                    alert("Hubo un error, intenta de nuevo");
+                  }
+                });
+            </script>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer-wrapper">
+      <div class="footer-main-container">
+        <!-- FOOTER CONTAINER -->
+        <div class="footer-container main-container">
+          <!-- FOOTER ITEM -->
+          <div class="footer-item">
+            <div class="footer-legal">
+              <a
+                href="/politica-de-cookies"
+                title="Política de Cookies | Circco Media"
+                >política de cookies</a
+              >
+              <a href="/aviso-legal" title="Aviso Legal | Circco Media"
+                >aviso legal</a
+              >
+              <a
+                href="/politica-de-privacidad"
+                title="Política de Privacidad | Circco Media"
+                >política de privacidad</a
+              >
+            </div>
+            <p class="mb-0">© TODOS LOS DERECHOS RESERVADOS, CIRCCO 2025</p>
+          </div>
+          <!-- FOOTER ITEM -->
+          <div class="footer-item">
+            <div class="footer-links">
+              <a href="" class="footer-link" title="Instagram | Circco Media"
+                >Instagram</a
+              >
+              <a href="" class="footer-link" title="Youtube | Circco Media"
+                >Youtube</a
+              >
+              <a href="" class="footer-link" title="Linkedin | Circco Media"
+                >Linkedin</a
+              >
+              <a
+                href="mailto:hola@circcomedia.com"
+                class="footer-link"
+                title="hola@circcomedia.com | Circco Media"
+                >hola@circcomedia.com</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- FOOTER DECO -->
+        <div class="footer-deco">
+          <h2>circco.</h2>
+        </div>
+      </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+    <script type="text/javascript" src="./gsap/minified/gsap.min.js"></script>
+    <script
+      type="text/javascript"
+      src="./gsap/minified/ScrollTrigger.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./gsap/minified/TextPlugin.min.js"
+    ></script>
+    <script src="./scripts/gsap.js"></script>
+    <script src="./bootstrap-5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./scripts/app.js"></script>
+    <script src="./scripts/cursor.js"></script>
+    <script>
+      Fancybox.bind("[data-fancybox]", {});
+    </script>
+  </body>
+</html>
