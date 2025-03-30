@@ -58,3 +58,17 @@
     }
   }
 }
+
+@media only screen and (max-width: 820px) {
+  .proyectos-main-container {
+    .rotate-container {
+      .proyectos-container {
+        .proyectos-item {
+          .proyectos-image {
+            height: 45vh;
+          }
+        }
+      }
+    }
+  }
+}

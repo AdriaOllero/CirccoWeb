@@ -146,53 +146,103 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //// PORTFOLIO SLIDER /////
 document.addEventListener("DOMContentLoaded", (event) => {
-  ///// SLIDER GALERIA /////
-  let items = gsap.utils.toArray(".proyectos-container"),
-    galleryContainer = document.querySelector(".proyectos-main-container");
+  const mm = gsap.matchMedia();
 
-  items.forEach((container, i) => {
-    let localItems = container.querySelectorAll(".proyectos-item"),
-      distance = () => {
-        let lastItemBounds =
-            localItems[localItems.length - 1].getBoundingClientRect(),
-          containerBounds = container.getBoundingClientRect();
-        return Math.max(0, lastItemBounds.right - containerBounds.right);
-      };
-    gsap.to(container, {
-      x: () => -distance(), // make sure it dynamically calculates things so that it adjusts to resizes
-      ease: "none",
-      scrollTrigger: {
-        trigger: container,
-        start: "-75px top",
-        pinnedContainer: galleryContainer,
-        end: () => "+=" + distance(),
-        pin: galleryContainer,
-        scrub: true,
+  mm.add("(min-width: 821px)", () => {
+    ///// SLIDER GALERIA /////
+    let items = gsap.utils.toArray(".proyectos-container"),
+      galleryContainer = document.querySelector(".proyectos-main-container");
 
-        invalidateOnRefresh: true, // will recalculate any function-based tween values on resize/refresh (making it responsive)
-      },
+    items.forEach((container, i) => {
+      let localItems = container.querySelectorAll(".proyectos-item"),
+        distance = () => {
+          let lastItemBounds =
+              localItems[localItems.length - 1].getBoundingClientRect(),
+            containerBounds = container.getBoundingClientRect();
+          return Math.max(0, lastItemBounds.right - containerBounds.right);
+        };
+      gsap.to(container, {
+        x: () => -distance(),
+        ease: "none",
+        scrollTrigger: {
+          trigger: container,
+          start: "-75px top",
+          pinnedContainer: galleryContainer,
+          end: () => "+=" + distance(),
+          pin: galleryContainer,
+          scrub: true,
+          invalidateOnRefresh: true,
+        },
+      });
+    });
+  });
+
+  mm.add("(max-width: 820px)", () => {
+    ///// SLIDER GALERIA MOBILE /////
+    let items = gsap.utils.toArray(".proyectos-container"),
+      galleryContainer = document.querySelector(".proyectos-main-container");
+
+    items.forEach((container, i) => {
+      let localItems = container.querySelectorAll(".proyectos-item"),
+        distance = () => {
+          let lastItemBounds =
+              localItems[localItems.length - 1].getBoundingClientRect(),
+            containerBounds = container.getBoundingClientRect();
+          return Math.max(0, lastItemBounds.right - containerBounds.right);
+        };
+      gsap.to(container, {
+        x: () => -distance(),
+        ease: "none",
+        scrollTrigger: {
+          trigger: container,
+          start: "-200px top", // Ajuste para mobile
+          pinnedContainer: galleryContainer,
+          end: () => "+=" + distance() / 2, // Ajuste para mobile
+          pin: galleryContainer,
+          scrub: true,
+          invalidateOnRefresh: true,
+        },
+      });
     });
   });
 });
 
 //// VIDEO ANIMATION ////
-gsap.set(".video-container", {
-  scale: 0.4,
+const mm = gsap.matchMedia();
+
+mm.add("(min-width: 768px)", () => {
+  gsap.set(".video-container", { scale: 0.4 });
+
+  gsap.to(".video-container", {
+    scale: 1,
+    ease: "power1.inOut",
+    scrollTrigger: {
+      trigger: ".video-main-container",
+      start: "-300 top",
+      end: "bottom bottom",
+      endTrigger: ".video-main-container",
+      scrub: 1,
+      pin: ".video-container",
+      pinSpacing: false,
+      //markers: true,
+    },
+  });
 });
 
-gsap.to(".video-container", {
-  scale: 1,
-  ease: "power1.inOut",
-  scrollTrigger: {
-    trigger: ".video-main-container",
-    start: "-300 top",
-    end: "bottom bottom",
-    endTrigger: ".video-main-container",
-    scrub: 1,
-    pin: ".video-container",
-    pinSpacing: false,
-    //markers: true,
-  },
+mm.add("(max-width: 767px)", () => {
+  // gsap.set(".video-container", { scale: 0.6 }); // Ajuste para mobile
+  // gsap.to(".video-container", {
+  //   scale: 1,
+  //   ease: "power1.inOut",
+  //   scrollTrigger: {
+  //     trigger: ".video-main-container",
+  //     start: "-100 top", // Ajuste para mobile
+  //     end: "bottom bottom",
+  //     scrub: 1,
+  //     pin: ".video-container",
+  //     pinSpacing: false,
+  //   },
+  // });
 });
 
 ////// FOTER ANIMATION //////
@@ -205,7 +255,7 @@ const footerHeight = footer.getBoundingClientRect().height;
 function initFooterAnimation() {
   // Detecta si es un dispositivo mÃ³vil o tablet
   //const isMobileOrTablet = window.innerWidth <= 1024; // 1024px es un lÃ­mite comÃºn para tablets
-//
+  //
   //if (isMobileOrTablet) {
   //  // No hacer nada en mÃ³vil o tablet
   //  return;

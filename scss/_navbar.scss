@@ -56,9 +56,18 @@ nav {
           }
         }
 
+        .mobile-menu-container {
+          display: none;
+          i {
+            color: $white-color;
+            font-size: 2em;
+          }
+        }
+
         .navbar-links-container {
           display: flex;
           align-items: center;
+          transition: 300ms all;
           .navbar-link {
             color: $white-color;
             text-decoration: none;
@@ -97,6 +106,44 @@ nav {
                   transform: translateY(-18px);
                 }
               }
+            }
+          }
+
+          .close-menu {
+            display: none;
+            i {
+              color: $white-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  nav {
+    .navbar-main-container {
+      .navbar-container {
+        .navbar-item {
+          .mobile-menu-container {
+            display: initial;
+          }
+
+          .navbar-links-container {
+            position: fixed;
+            z-index: 15;
+            top: 0;
+            right: -1024px;
+            width: 100vw;
+            height: 100vh;
+            background-color: $black-color;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .close-menu {
+              display: initial;
             }
           }
         }

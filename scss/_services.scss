@@ -73,3 +73,34 @@
     }
   }
 }
+
+@media only screen and (max-width: 1024px) {
+  .services-main-container {
+    .services-container {
+      .service-item {
+        .services-list {
+          margin-top: 86px;
+
+          .services-link {
+            a {
+              padding: 48px 0px 48px 0px;
+            }
+            &:first-child {
+              a {
+                padding: 0px 0px 48px 0px;
+              }
+            }
+          }
+
+          .services-content-container {
+            .services-content {
+              .services-text {
+                max-width: 90%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

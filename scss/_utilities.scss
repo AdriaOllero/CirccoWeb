@@ -89,6 +89,12 @@ td {
   overflow: hidden;
 }
 
+/// ESPECIAL TEXT PADD
+.especial-text-padd {
+  padding-block: 0px 256px;
+}
+
+
 /// BUTTONS
 
 .link {
@@ -146,8 +152,12 @@ td {
   z-index: 9999;
 }
 
-@media only screen and (max-width: 1080px) {
+@media only screen and (max-width: 1024px) {
   .main-container {
     max-width: 90vw;
+  }
+
+  .especial-text-padd {
+    padding-block: 0px 124px;
   }
 }

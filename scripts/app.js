@@ -7,3 +7,12 @@ document.addEventListener("mousemove", (e) => {
     el.style.transform = `translate(${x}px, ${y}px)`;
   });
 });
+
+//// MENU OPEN
+var navbar = document.getElementById("navbar");
+var menuToggle = false;
+
+function onMenu() {
+  navbar.style.right = menuToggle ? "-1024px" : "0";
+  menuToggle = !menuToggle;
+}

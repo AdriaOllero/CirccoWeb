@@ -17,3 +17,12 @@
     }
   }
 }
+
+@media only screen and (max-width: 1024px) {
+  .video-main-container {
+    height: auto;
+    padding-bottom: 124px;
+    .video-container {
+    }
+  }
+}

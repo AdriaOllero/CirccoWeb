@@ -63,3 +63,37 @@ footer {
     }
   }
 }
+
+@media only screen and (max-width: 820px) {
+  footer {
+    .footer-main-container {
+      .footer-container {
+        flex-direction: column;
+        .footer-item {
+          .footer-legal {
+            justify-content: space-between;
+            a {
+              padding-right: initial;
+              text-align: center;
+              font-size: 14px;
+              color: $white-color;
+            }
+          }
+
+          p {
+            text-align: center;
+            color: $white-color;
+            font-size: 14px;
+          }
+        }
+      }
+
+      .footer-deco {
+        h2 {
+          font-size: 180px;
+          line-height: 80px;
+        }
+      }
+    }
+  }
+}
