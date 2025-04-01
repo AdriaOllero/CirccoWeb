@@ -1,0 +1,66 @@
+.post-main-container {
+  .post-container {
+    max-width: 75vw;
+    .post-item {
+      position: relative;
+      height: 100%;
+      .post-info {
+        position: sticky;
+        top: 164px;
+        z-index: 2;
+        .text-section-title {
+          margin-top: 16px;
+        }
+
+        .text-small {
+          width: 100%;
+          max-width: 100%;
+        }
+
+        .share-main-container {
+          margin-top: 64px;
+          .share-container {
+            a {
+              text-decoration: none;
+              color: $white-color;
+              img {
+                margin-left: 32px;
+                width: 25px;
+                transition: 300ms all;
+              }
+
+              &:hover {
+                img {
+                  transform: scale(1.25);
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .post-content {
+        padding-left: 64px;
+
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          color: $white-color;
+          margin-bottom: 24px;
+        }
+
+        small {
+          color: $white-color;
+        }
+
+        p {
+          color: $white-color;
+          margin-bottom: 16px;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}

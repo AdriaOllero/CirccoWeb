@@ -1,0 +1,41 @@
+.banner-main-container {
+  .banner-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    h1 {
+      font-size: 164px;
+      text-align: center;
+      line-height: 144px;
+      color: $white-color;
+    }
+
+    .banner-title {
+      padding-left: 48px;
+      h2 {
+        color: $white-color;
+        font-weight: 100;
+      }
+      a {
+        text-decoration: none;
+        span {
+          color: rgb(175, 175, 175);
+          font-weight: 100;
+        }
+
+        img {
+          margin-left: 24px;
+          max-height: 35px;
+          transition: 300ms all;
+        }
+
+        &:hover {
+          img {
+            transform: translate(15px);
+          }
+        }
+      }
+    }
+  }
+}
