@@ -40,10 +40,6 @@
 
     .text-container {
       margin-top: 10vh;
-
-      .text-small {
-        max-width: 100%;
-      }
     }
   }
 }
@@ -54,6 +50,7 @@
   }
   .interiorServices-container {
     .interiorServices-item {
+      background-color: $black-color;
       padding-block: clamp(64px, 6.46vw, 124px);
       display: block;
       text-decoration: none;
