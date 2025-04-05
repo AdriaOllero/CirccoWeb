@@ -147,11 +147,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
   ///// SINGLE ANIMATIONS /////
   gsap.registerPlugin(ScrollTrigger);
 
-  ///// SPLIT TEXT SETUP /////
-  let typeSplit = new SplitType("[animate]", {
-    types: "lines, words, chars",
-    tagName: "span",
-  });
+  // ///// SPLIT TEXT SETUP /////
+  // let typeSplit = new SplitType("[animate]", {
+  //   types: "lines, words, chars",
+  //   tagName: "span",
+  // });
 
   ///// SLIDER GALERIA /////
   let items = gsap.utils.toArray(".proyectos-container"),
@@ -307,6 +307,7 @@ initFooterAnimation();
 
 ///// TEXT ANIMATION /////
 
+///// SERVICE TITLE /////
 let typeSplit = new SplitType("[animateTitle]", {
   types: "lines, words, chars",
   tagName: "span",
@@ -321,6 +322,22 @@ gsap.from("[animateTitle] .char", {
   stagger: 0.1,
 });
 
+///// SERVICE TITLE /////
+let typeServiceSplit = new SplitType("[animateServiceTitle]", {
+  types: "lines, words, chars",
+  tagName: "span",
+});
+
+gsap.from("[animateServiceTitle] .line", {
+  y: "110%",
+  opacity: 1,
+  rotationZ: "0",
+  duration: 1,
+  ease: "power1.out",
+  stagger: 0.1,
+});
+
+///// SERVICE TITLE /////
 let typeSplitText = new SplitType("[animateText]", {
   types: "lines, words, chars",
   tagName: "span",

@@ -1,18 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Agencia Digital | Circco Media</title>
+      <!-- Básico -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agencia Digital en Ibiza | Branding, Web y Contenido | Circco Media</title>
+  <meta name="description" content="Circco Media es una agencia digital en Ibiza que humaniza tu marca. Branding, diseño web, estrategia y contenido que conecta con el mundo.">
+  <meta name="keywords" content="agencia digital, diseño web Ibiza, branding, estrategia de marca, contenido digital, marketing digital, circco media" />
+  <meta name="author" content="Circco Media" />
+  <meta name="robots" content="index, follow" />
 
-    <link rel="stylesheet" href="./css/bootstrap.min.css" />
-    <link rel="stylesheet" href="./css/all.min.css" />
-    <link rel="icon" href="./assets/svg/favicon.svg" />
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://circcomedia.com/" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
-    />
+  <!-- Favicon -->
+  <link rel="icon" href="./assets/svg/favicon.svg" type="image/svg+xml" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+
+  <!-- Open Graph (Facebook, LinkedIn, etc) -->
+  <meta property="og:title" content="Circco Media | Agencia Digital en Ibiza" />
+  <meta property="og:description" content="Humanizamos tu marca con branding, diseño web, estrategia y contenido digital desde Ibiza." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://circcomedia.com/" />
+  <meta property="og:image" content="https://circcomedia.com/assets/images/og-image.jpg" />
+  <meta property="og:site_name" content="Circco Media" />
+  <meta property="og:locale" content="es_ES" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Circco Media | Agencia Digital en Ibiza" />
+  <meta name="twitter:description" content="Branding, diseño web y contenido para marcas auténticas. Desde Ibiza al mundo." />
+  <meta name="twitter:image" content="https://circcomedia.com/assets/images/og-image.jpg" />
+  <meta name="twitter:site" content="@CirccoMedia" />
+  <meta name="twitter:creator" content="@CirccoMedia" />
+
+   <!-- HREFLANG (PREPARADO PARA MULTIIDIOMA EN UMBRACO) -->
+   <link rel="alternate" hreflang="es" href="https://www.circcomedia.com/es/" />
+   <link rel="alternate" hreflang="en" href="https://www.circcomedia.com/en/" />
+   <link rel="alternate" hreflang="x-default" href="https://www.circcomedia.com/" />
+
+
+
+  <!-- Schema.org (JSON-LD) -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Circco Media",
+      "url": "https://circcomedia.com",
+      "logo": "https://circcomedia.com/assets/svg/favicon.svg",
+      "description": "Agencia digital en Ibiza especializada en branding, diseño web, estrategia y contenido digital.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ibiza",
+        "addressCountry": "ES"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "España"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://circcomedia.com/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "hola@circcomedia.com",
+        "contactType": "customer support",
+        "availableLanguage": ["Spanish", "English"]
+      },
+      "sameAs": [
+        "https://www.instagram.com/circcomedia",
+        "https://www.linkedin.com/company/circcomedia"
+      ]
+    }
+  </script>
+
+  <!-- Accesibilidad y rendimiento -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="theme-color" content="#000000" />
 
     <style>
       body {
@@ -26,7 +97,7 @@
     <div class="d-none" id="cursor"></div>
 
     <!-- NAVBAR -->
-    <nav>
+    <nav aria-label="Menú principal">
       <div class="navbar-main-container">
         <div class="navbar-container main-container">
           <!-- NAVBAR ITEM -->
@@ -101,13 +172,13 @@
           <!-- NAVBAR ITEM -->
           <div class="navbar-item">
             <!-- MOBILE MENU -->
-            <div class="mobile-menu-container" onclick="onMenu()">
+            <div class="mobile-menu-container" onclick="onMenu()" aria-label="Abrir menú móvil">
               <i class="fal fa-bars"></i>
             </div>
 
             <div class="navbar-links-container" id="navbar">
               <!-- WORKS -->
-              <a class="navbar-link" href="/works.html" title="Works | Circco Media">
+              <a class="navbar-link" href="/works.html" title="Ver trabajos">
                 <img
                   class="navbar-icon"
                   src="./assets/svg/navbar-icon.svg"
@@ -124,7 +195,7 @@
               <a
                 class="navbar-link"
                 href="/services.html"
-                title="Services | Circco Media"
+                title="Nuestros servicios"
               >
                 <img
                   class="navbar-icon"
@@ -139,7 +210,7 @@
               </a>
 
               <!-- ABOUT -->
-              <a class="navbar-link" href="/about.html" title="About | Circco Media">
+              <a class="navbar-link" href="/about.html" title="Sobre nosotros">
                 <img
                   class="navbar-icon"
                   src="./assets/svg/navbar-icon.svg"
@@ -157,7 +228,7 @@
               <a
                 class="navbar-link"
                 href="/blog.html"
-                title="Blog | Circco Media"
+                title="Blog"
               >
                 <img
                   class="navbar-icon"
@@ -176,7 +247,7 @@
               <a
                 class="navbar-link"
                 href="/contact.html"
-                title="Contact | Circco Media"
+                title="Contacto"
               >
                 <img
                   class="navbar-icon"
@@ -192,7 +263,7 @@
               </a>
 
               <!-- CLOSE MENU -->
-              <div class="close-menu" onclick="onMenu()">
+              <div class="close-menu" onclick="onMenu()" aria-label="Cerrar menú">
                 <i class="fal fa-times"></i>
               </div>
             </div>
@@ -204,7 +275,7 @@
     <!-- MAIN -->
     <main>
       <!-- HERO -->
-      <section>
+      <section id="hero" aria-labelledby="titulo-hero">
         <div class="hero-main-container">
           <img
             class="bubble-left "
@@ -941,53 +1012,34 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="footer-wrapper">
+    <footer class="footer-wrapper" role="contentinfo">
       <div class="footer-main-container">
-        <!-- FOOTER CONTAINER -->
         <div class="footer-container main-container">
-          <!-- FOOTER ITEM -->
+          
+          <!-- INFORMACIÓN LEGAL -->
           <div class="footer-item">
-            <div class="footer-legal">
-              <a
-                href="/politica-de-cookies"
-                title="Política de Cookies | Circco Media"
-                >COOKIES</a
-              >
-              <a href="/aviso-legal" title="Aviso Legal | Circco Media"
-                >LEGAL</a
-              >
-              <a
-                href="/politica-de-privacidad"
-                title="Política de Privacidad | Circco Media"
-                >PRIVACIDAD</a
-              >
+            <div class="footer-legal" aria-label="Legal">
+              <a href="/politica-de-cookies" title="Política de Cookies | Circco Media">Cookies</a>
+              <a href="/aviso-legal" title="Aviso Legal | Circco Media">Legal</a>
+              <a href="/politica-de-privacidad" title="Política de Privacidad | Circco Media">Privacidad</a>
             </div>
-            <p class="mb-0">© TODOS LOS DERECHOS RESERVADOS, CIRCCO 2025</p>
+            <p class="mb-0" aria-label="Copyright">© TODOS LOS DERECHOS RESERVADOS, CIRCCO 2025</p>
           </div>
-          <!-- FOOTER ITEM -->
+
+          <!-- REDES Y CONTACTO -->
           <div class="footer-item">
-            <div class="footer-links">
-              <a href="" class="footer-link" title="Instagram | Circco Media"
-                >Instagram</a
-              >
-              <a href="" class="footer-link" title="Youtube | Circco Media"
-                >Youtube</a
-              >
-              <a href="" class="footer-link" title="Linkedin | Circco Media"
-                >Linkedin</a
-              >
-              <a
-                href="mailto:hola@circcomedia.com"
-                class="footer-link"
-                title="hola@circcomedia.com | Circco Media"
-                >hola@circcomedia.com</a
-              >
+            <div class="footer-links" aria-label="Redes sociales">
+              <a href="https://www.instagram.com/circcomedia" class="footer-link" title="Instagram | Circco Media" target="_blank" rel="noopener noreferrer">Instagram</a>
+              <a href="https://www.youtube.com/@circcomedia" class="footer-link" title="Youtube | Circco Media" target="_blank" rel="noopener noreferrer">YouTube</a>
+              <a href="https://www.linkedin.com/company/circcomedia" class="footer-link" title="LinkedIn | Circco Media" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a href="mailto:hola@circcomedia.com" class="footer-link" title="Enviar email a Circco Media">hola@circcomedia.com</a>
             </div>
           </div>
+
         </div>
 
-        <!-- FOOTER DECO -->
-        <div class="footer-deco">
+        <!-- DECORACIÓN / MARCA -->
+        <div class="footer-deco" aria-hidden="true">
           <h2>circco.</h2>
         </div>
       </div>
@@ -995,25 +1047,22 @@
 
     <!-- SCRIPTS -->
     <script src="https://unpkg.com/split-type"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" integrity="sha384-P2YxR2FqF..." crossorigin="anonymous"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 
-    <script type="text/javascript" src="./gsap/minified/gsap.min.js"></script>
-    <script
-      type="text/javascript"
-      src="./gsap/minified/ScrollTrigger.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="./gsap/minified/TextPlugin.min.js"
-    ></script>
-    <script src="./scripts/gsap.js"></script>
-    <script src="./bootstrap-5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./scripts/app.js"></script>
-    <script src="./scripts/cursor.js"></script>
+    <script src="/gsap/minified/gsap.min.js"></script>
+    <script src="/gsap/minified/ScrollTrigger.min.js"></script>
+    <script src="/gsap/minified/TextPlugin.min.js"></script>
+
+    <script src="/scripts/gsap.js"></script>
+    <script src="/bootstrap-5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/scripts/app.js"></script>
+    <script src="/scripts/cursor.js"></script>
+
     <script>
       Fancybox.bind("[data-fancybox]", {});
     </script>
+   
   </body>
 </html>

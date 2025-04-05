@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agencia Digital | Circco Media</title>
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="icon" href="./assets/svg/favicon.svg" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+
+    <style>
+      body {
+        overflow-x: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Cursor -->
+    <div id="cursor-border"></div>
+    <div class="d-none" id="cursor"></div>
+
+    <!-- NAVBAR -->
+    <nav>
+      <div class="navbar-main-container">
+        <div class="navbar-container main-container">
+          <!-- NAVBAR ITEM -->
+          <div class="navbar-item">
+            <!--LOGO -->
+            <div class="logo-container">
+              <a
+                class="logo"
+                href="/"
+                title="Agencia Digital | Circco Media"
+                data-cursor="pointer"
+              >
+                <!-- <img
+                  src="./assets/svg/logo-text.svg"
+                  alt="Agencia Digital | Circco Media"
+                  title="Agencia Digital | Circco Media"
+                /> -->
+
+                <img
+                  width="30"
+                  height="30"
+                  src="./assets/svg/letters/c.svg"
+                  alt="Agencia Digital | Circco Media"
+                  title="Agencia Digital | Circco Media"
+                />
+                <img
+                  width="15"
+                  height="30"
+                  src="./assets/svg/letters/i.svg"
+                  alt="Agencia Digital | Circco Media"
+                  title="Agencia Digital | Circco Media"
+                />
+                <img
+                  width="30"
+                  height="30"
+                  src="./assets/svg/letters/r.svg"
+                  alt="Agencia Digital | Circco Media"
+                  title="Agencia Digital | Circco Media"
+                />
+                <img
+                  style="margin-left: -4px"
+                  width="30"
+                  height="30"
+                  src="./assets/svg/letters/c.svg"
+                  alt="Agencia Digital | Circco Media"
+                  title="Agencia Digital | Circco Media"
+                />
+                <img
+                  width="30"
+                  height="30"
+                  src="./assets/svg/letters/c.svg"
+                  alt="Agencia Digital | Circco Media"
+                  title="Agencia Digital | Circco Media"
+                />
+                <img
+                  width="30"
+                  height="30"
+                  src="./assets/svg/letters/o.svg"
+                  alt="Agencia Digital | Circco Media"
+                  title="Agencia Digital | Circco Media"
+                />
+                <img
+                  width="10"
+                  height="10"
+                  src="./assets/svg/letters/point.svg"
+                  alt="Agencia Digital | Circco Media"
+                  title="Agencia Digital | Circco Media"
+                />
+              </a>
+            </div>
+          </div>
+          <!-- NAVBAR ITEM -->
+          <div class="navbar-item">
+            <!-- MOBILE MENU -->
+            <div class="mobile-menu-container" onclick="onMenu()">
+              <i class="fal fa-bars"></i>
+            </div>
+
+            <div class="navbar-links-container" id="navbar">
+              <!-- WORKS -->
+              <a class="navbar-link" href="/works.html" title="Works | Circco Media">
+                <img
+                  class="navbar-icon"
+                  src="./assets/svg/navbar-icon.svg"
+                  alt="Works | Circco Media"
+                  title="Works | Circco Media"
+                />
+                <div class="navbar-link-rotate">
+                  <span class="navbar-link-first">works</span>
+                  <span class="navbar-link-second">works</span>
+                </div>
+              </a>
+
+              <!-- SERVICES -->
+              <a
+                class="navbar-link"
+                href="/services.html"
+                title="Services | Circco Media"
+              >
+                <img
+                  class="navbar-icon"
+                  src="./assets/svg/navbar-icon.svg"
+                  alt="Services | Circco Media"
+                  title="Services | Circco Media"
+                />
+                <div class="navbar-link-rotate">
+                  <span class="navbar-link-first">services</span>
+                  <span class="navbar-link-second">services</span>
+                </div>
+              </a>
+
+              <!-- ABOUT -->
+              <a class="navbar-link" href="/about.html" title="About | Circco Media">
+                <img
+                  class="navbar-icon"
+                  src="./assets/svg/navbar-icon.svg"
+                  alt="About | Circco Media"
+                  title="About | Circco Media"
+                />
+
+                <div class="navbar-link-rotate">
+                  <span class="navbar-link-first">about</span>
+                  <span class="navbar-link-second">about</span>
+                </div>
+              </a>
+
+              <!-- BLOG -->
+              <a
+                class="navbar-link"
+                href="/blog.html"
+                title="Blog | Circco Media"
+              >
+                <img
+                  class="navbar-icon"
+                  src="./assets/svg/navbar-icon.svg"
+                  alt="Blog | Circco Media"
+                  title="Blog | Circco Media"
+                />
+
+                <div class="navbar-link-rotate">
+                  <span class="navbar-link-first">blog</span>
+                  <span class="navbar-link-second">blog</span>
+                </div>
+              </a>
+
+              <!-- CONTACT -->
+              <a
+                class="navbar-link"
+                href="/contact.html"
+                title="Contact | Circco Media"
+              >
+                <img
+                  class="navbar-icon"
+                  src="./assets/svg/navbar-icon.svg"
+                  alt="Contact | Circco Media"
+                  title="Contact | Circco Media"
+                />
+
+                <div class="navbar-link-rotate">
+                  <span class="navbar-link-first">contact</span>
+                  <span class="navbar-link-second">contact</span>
+                </div>
+              </a>
+
+              <!-- CLOSE MENU -->
+              <div class="close-menu" onclick="onMenu()">
+                <i class="fal fa-times"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- MAIN -->
+    <main>
+
+    <!-- INTERIOR BANNER -->
+    <section>
+      <div class="servicesBanner-main-container">
+        <img class="bubble-right" src="./assets/images/bubble-right.png" alt="Decorative bubble shape" />
+        <div class="servicesBanner-container main-container">
+          <div class="main-title" >
+            <span animateServiceTitle style="overflow: hidden;">Creamos mundos de marca que conectan con tus clientes</span>
+          </div>
+
+          <div class="text-container">
+            <h1 class="hiddenTitle">Servicios de agencia creativa digital en Madrid</h1>
+            <p class="text-small">
+              En CirccoMedia diseñamos estrategias digitales a medida, creamos contenido que enamora y desarrollamos experiencias digitales que marcan la diferencia. Descubre cómo podemos ayudarte.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERIOR SERVICES -->
+    <section>
+      <div class="interiorServices-main-container main-container">
+        <div class="interiorServices-container">
+
+          <!-- Estrategia -->
+          <article class="interiorServices-item" itemscope itemtype="https://schema.org/Service">
+            <a href="/estrategia" title="Estrategia Digital para Marcas | CirccoMedia">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="interiorServices-image">
+                    <img class="img-fluid" src="/assets/images/blog-3.jpg" alt="Consultoría estratégica para marcas - CirccoMedia" itemprop="image">
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="interiorServices-content ps-lg-5 ps-0">
+                    <div>
+                      <h2 class="interiorServices-content-title" itemprop="name">
+                        <img src="/assets/svg/arrow-color.svg" alt="Icono estrategia"> Estrategia
+                      </h2>
+                      <small itemprop="description">Posicionamiento, diferenciación y hoja de ruta digital a medida</small>
+                      <p>Analizamos, proponemos y activamos planes estratégicos que te permiten tener foco, objetivos medibles y ventaja competitiva real.</p>
+                      <p>Desde estudios de mercado hasta estrategias de contenido, branding o funnel de conversión. Todo basado en datos y creatividad.</p>
+                    </div>
+                    <div class="d-flex w-100 justify-content-between">
+                      <p class="link mb-0">DESCUBRE COMO TE PODEMOS AYUDAR</p>
+                      <p class="link mb-0"><em>#works #proyectos</em></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <!-- Branding -->
+          <article class="interiorServices-item" itemscope itemtype="https://schema.org/Service">
+            <a href="/branding" title="Branding Creativo en Madrid | CirccoMedia">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="interiorServices-content pe-lg-5 pe-0">
+                    <div>
+                      <h2 class="interiorServices-content-title" itemprop="name">
+                        <img src="/assets/svg/arrow-color.svg" alt="Icono branding"> Branding
+                      </h2>
+                      <small itemprop="description">Creamos marcas memorables que conectan con las personas</small>
+                      <p>Diseño de identidad visual, naming, tono de voz y universo gráfico para marcas con propósito. Te ayudamos a destacar en un mundo saturado.</p>
+                      <p>Transformamos tu marca en una experiencia coherente y emocional desde todos los puntos de contacto.</p>
+                    </div>
+                    <p class="link mb-0">VER TODOS LOS SERVICIOS</p>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="interiorServices-image">
+                    <img class="img-fluid" src="/assets/images/blog-2.jpg" alt="Branding emocional y visual - CirccoMedia" itemprop="image">
+                  </div>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <!-- Diseño Web -->
+          <article class="interiorServices-item" itemscope itemtype="https://schema.org/Service">
+            <a href="/web" title="Diseño Web Creativo y Funcional | CirccoMedia">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="interiorServices-image">
+                    <img class="img-fluid" src="/assets/images/blog-4.jpg" alt="Diseño web responsive - CirccoMedia" itemprop="image">
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="interiorServices-content ps-lg-5 ps-0">
+                    <div>
+                      <h2 class="interiorServices-content-title" itemprop="name">
+                        <img src="/assets/svg/arrow-color.svg" alt="Icono diseño web"> Diseño web
+                      </h2>
+                      <small itemprop="description">Experiencias digitales que convierten visitas en clientes</small>
+                      <p>Diseñamos webs creativas, funcionales y con foco en experiencia de usuario, velocidad de carga y posicionamiento SEO.</p>
+                      <p>Landing pages, tiendas online, portfolios o webs corporativas: tú decides el objetivo, nosotros el camino.</p>
+                    </div>
+                    <div class="d-flex w-100 justify-content-between">
+                      <p class="link mb-0">DESCUBRE COMO TE PODEMOS AYUDAR</p>
+                      <p class="link mb-0"><em>#UX #responsive</em></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <!-- Desarrollo Mobile -->
+          <article class="interiorServices-item" itemscope itemtype="https://schema.org/Service">
+            <a href="/desarrollo-mobile" title="Apps y desarrollo móvil | CirccoMedia">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="interiorServices-content pe-lg-5 pe-0">
+                    <div>
+                      <h2 class="interiorServices-content-title" itemprop="name">
+                        <img src="/assets/svg/arrow-color.svg" alt="Icono mobile"> Desarrollo Mobile
+                      </h2>
+                      <small itemprop="description">Aplicaciones y experiencias móviles a medida</small>
+                      <p>Apps híbridas y progresivas para marcas que quieren estar en el bolsillo de sus clientes. Tecnología ágil, diseño fluido, rendimiento total.</p>
+                      <p>Integramos lo digital con lo cotidiano, llevando tu negocio a donde tus usuarios ya están.</p>
+                    </div>
+                    <p class="link mb-0">VER TODOS LOS SERVICIOS</p>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="interiorServices-image">
+                    <img class="img-fluid" src="/assets/images/blog-5.webp" alt="Desarrollo de apps móviles - CirccoMedia" itemprop="image">
+                  </div>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <!-- Redes Sociales -->
+          <article class="interiorServices-item" itemscope itemtype="https://schema.org/Service">
+            <a href="/redes" title="Gestión de redes sociales y contenido | CirccoMedia">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="interiorServices-image  pe-lg-5 pe-0">
+                    <img class="img-fluid" src="/assets/images/bbva-image.jpg" alt="Social media y contenido visual - CirccoMedia" itemprop="image">
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="interiorServices-content">
+                    <div>
+                      <h2 class="interiorServices-content-title" itemprop="name">
+                        <img src="/assets/svg/arrow-color.svg" alt="Icono redes sociales"> Media + RRSS
+                      </h2>
+                      <small itemprop="description">Contenido que conecta, campañas que convierten</small>
+                      <p>Planificación estratégica de publicaciones, creación de contenido visual, reels, stories y gestión integral de comunidad.</p>
+                      <p>Hacemos que tu marca hable, inspire y se relacione de forma real en redes como Instagram, TikTok, Facebook o LinkedIn.</p>
+                    </div>
+                    <p class="link mb-0">VER TODOS LOS SERVICIOS</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </article>
+
+
+          <!-- Fotografia -->
+          <article class="interiorServices-item" itemscope itemtype="https://schema.org/Service">
+            <a href="/redes" title="Gestión de redes sociales y contenido | CirccoMedia">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="interiorServices-content pe-lg-5 pe-0">
+                    <div>
+                      <h2 class="interiorServices-content-title" itemprop="name">
+                        <img src="/assets/svg/arrow-color.svg" alt="Icono redes sociales"> Fotografía
+                      </h2>
+                      <small itemprop="description">Contenido que conecta, campañas que convierten</small>
+                      <p>Planificación estratégica de publicaciones, creación de contenido visual, reels, stories y gestión integral de comunidad.</p>
+                      <p>Hacemos que tu marca hable, inspire y se relacione de forma real en redes como Instagram, TikTok, Facebook o LinkedIn.</p>
+                    </div>
+                    <p class="link mb-0">VER TODOS LOS SERVICIOS</p>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="interiorServices-image">
+                    <img class="img-fluid" src="/assets/images/bbva-image.jpg" alt="Social media y contenido visual - CirccoMedia" itemprop="image">
+                  </div>
+                </div>
+                
+              </div>
+            </a>
+          </article>
+
+          <!-- Videografia -->
+          <article class="interiorServices-item" itemscope itemtype="https://schema.org/Service">
+            <a href="/redes" title="Gestión de redes sociales y contenido | CirccoMedia">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="interiorServices-image  pe-lg-5 pe-0">
+                    <img class="img-fluid" src="/assets/images/bbva-image.jpg" alt="Social media y contenido visual - CirccoMedia" itemprop="image">
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="interiorServices-content">
+                    <div>
+                      <h2 class="interiorServices-content-title" itemprop="name">
+                        <img src="/assets/svg/arrow-color.svg" alt="Icono redes sociales"> Videografía
+                      </h2>
+                      <small itemprop="description">Contenido que conecta, campañas que convierten</small>
+                      <p>Planificación estratégica de publicaciones, creación de contenido visual, reels, stories y gestión integral de comunidad.</p>
+                      <p>Hacemos que tu marca hable, inspire y se relacione de forma real en redes como Instagram, TikTok, Facebook o LinkedIn.</p>
+                    </div>
+                    <p class="link mb-0">VER TODOS LOS SERVICIOS</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+      <!-- NEWSLETTER -->
+      <section>
+        <div class="newsletter-main-container">
+          <div class="newsletter-container gPadd">
+            <div class="row">
+              <div class="col-lg-10">
+                <!-- NEWSLETTER ITEM -->
+                <div class="newsletter-item">
+                  <p class="text-small mb-5">
+                    Una agencia DÓNDE <br />LAS MARCAS COBRAN VIDA 🤍
+                  </p>
+                  <a
+                    data-cursor="newsletterPointer"
+                    href="mailto:hola@circcomedia.com"
+                    title="Enviar email | Circco Media"
+                  >
+                    hola@circcomedia.com
+
+                    <img
+                      src="./assets/svg/arrow-color.svg"
+                      alt="Enviar email | Circco Media"
+                      title="Enviar email | Circco Media"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer-wrapper">
+      <div class="footer-main-container">
+        <!-- FOOTER CONTAINER -->
+        <div class="footer-container main-container">
+          <!-- FOOTER ITEM -->
+          <div class="footer-item">
+            <div class="footer-legal">
+              <a
+                href="/politica-de-cookies"
+                title="Política de Cookies | Circco Media"
+                >COOKIES</a
+              >
+              <a href="/aviso-legal" title="Aviso Legal | Circco Media"
+                >LEGAL</a
+              >
+              <a
+                href="/politica-de-privacidad"
+                title="Política de Privacidad | Circco Media"
+                >PRIVACIDAD</a
+              >
+            </div>
+            <p class="mb-0">© TODOS LOS DERECHOS RESERVADOS, CIRCCO 2025</p>
+          </div>
+          <!-- FOOTER ITEM -->
+          <div class="footer-item">
+            <div class="footer-links">
+              <a href="" class="footer-link" title="Instagram | Circco Media"
+                >Instagram</a
+              >
+              <a href="" class="footer-link" title="Youtube | Circco Media"
+                >Youtube</a
+              >
+              <a href="" class="footer-link" title="Linkedin | Circco Media"
+                >Linkedin</a
+              >
+              <a
+                href="mailto:hola@circcomedia.com"
+                class="footer-link"
+                title="hola@circcomedia.com | Circco Media"
+                >hola@circcomedia.com</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- FOOTER DECO -->
+        <div class="footer-deco">
+          <h2>circco.</h2>
+        </div>
+      </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" integrity="sha384-P2YxR2FqF..." crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+    <script src="/gsap/minified/gsap.min.js"></script>
+    <script src="/gsap/minified/ScrollTrigger.min.js"></script>
+    <script src="/gsap/minified/TextPlugin.min.js"></script>
+
+    <script src="/scripts/gsap.js"></script>
+    <script src="/bootstrap-5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/scripts/app.js"></script>
+    <script src="/scripts/cursor.js"></script>
+
+    <script>
+      Fancybox.bind("[data-fancybox]", {});
+    </script>
+  </body>
+</html>
