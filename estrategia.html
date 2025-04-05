@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agencia Digital | Circco Media</title>
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="icon" href="./assets/svg/favicon.svg" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+
+    <style>
+      body {
+        overflow-x: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Cursor -->
+    <div id="cursor-border"></div>
+    <div class="d-none" id="cursor"></div>
+
+    <!-- NAVBAR -->
+    <nav>
+      <div class="navbar-main-container">
+        <div class="navbar-container main-container">
+          <!-- NAVBAR ITEM -->
+          <div class="navbar-item">
+            <!--LOGO -->
+            <div class="logo-container">
+              <a
+                class="logo"
+                href="/"
+                title="Agencia Digital | Circco Media"
+                data-cursor="pointer"
+              >
+                <!-- <img
+                  src="./assets/svg/logo-text.svg"
+                  alt="Agencia Digital | Circco Media"
+                  title="Agencia Digital | Circco Media"
+                /> -->
+
+                <img
+                  width="30"
+                  height="30"
+                  src="./assets/svg/letters/c.svg"
+                  alt="Agencia Digital | Circco Media"
+                  title="Agencia Digital | Circco Media"
+                />
+                <img
+                  width="15"
+                  height="30"
+                  src="./assets/svg/letters/i.svg"
+                  alt="Agencia Digital | Circco Media"
+                  title="Agencia Digital | Circco Media"
+                />
+                <img
+                  width="30"
+                  height="30"
+                  src="./assets/svg/letters/r.svg"
+                  alt="Agencia Digital | Circco Media"
+                  title="Agencia Digital | Circco Media"
+                />
+                <img
+                  style="margin-left: -4px"
+                  width="30"
+                  height="30"
+                  src="./assets/svg/letters/c.svg"
+                  alt="Agencia Digital | Circco Media"
+                  title="Agencia Digital | Circco Media"
+                />
+                <img
+                  width="30"
+                  height="30"
+                  src="./assets/svg/letters/c.svg"
+                  alt="Agencia Digital | Circco Media"
+                  title="Agencia Digital | Circco Media"
+                />
+                <img
+                  width="30"
+                  height="30"
+                  src="./assets/svg/letters/o.svg"
+                  alt="Agencia Digital | Circco Media"
+                  title="Agencia Digital | Circco Media"
+                />
+                <img
+                  width="10"
+                  height="10"
+                  src="./assets/svg/letters/point.svg"
+                  alt="Agencia Digital | Circco Media"
+                  title="Agencia Digital | Circco Media"
+                />
+              </a>
+            </div>
+          </div>
+          <!-- NAVBAR ITEM -->
+          <div class="navbar-item">
+            <!-- MOBILE MENU -->
+            <div class="mobile-menu-container" onclick="onMenu()">
+              <i class="fal fa-bars"></i>
+            </div>
+
+            <div class="navbar-links-container" id="navbar">
+              <!-- WORKS -->
+              <a class="navbar-link" href="/works.html" title="Works | Circco Media">
+                <img
+                  class="navbar-icon"
+                  src="./assets/svg/navbar-icon.svg"
+                  alt="Works | Circco Media"
+                  title="Works | Circco Media"
+                />
+                <div class="navbar-link-rotate">
+                  <span class="navbar-link-first">works</span>
+                  <span class="navbar-link-second">works</span>
+                </div>
+              </a>
+
+              <!-- SERVICES -->
+              <a
+                class="navbar-link"
+                href="/services.html"
+                title="Services | Circco Media"
+              >
+                <img
+                  class="navbar-icon"
+                  src="./assets/svg/navbar-icon.svg"
+                  alt="Services | Circco Media"
+                  title="Services | Circco Media"
+                />
+                <div class="navbar-link-rotate">
+                  <span class="navbar-link-first">services</span>
+                  <span class="navbar-link-second">services</span>
+                </div>
+              </a>
+
+              <!-- ABOUT -->
+              <a class="navbar-link" href="/about.html" title="About | Circco Media">
+                <img
+                  class="navbar-icon"
+                  src="./assets/svg/navbar-icon.svg"
+                  alt="About | Circco Media"
+                  title="About | Circco Media"
+                />
+
+                <div class="navbar-link-rotate">
+                  <span class="navbar-link-first">about</span>
+                  <span class="navbar-link-second">about</span>
+                </div>
+              </a>
+
+              <!-- BLOG -->
+              <a
+                class="navbar-link"
+                href="/blog.html"
+                title="Blog | Circco Media"
+              >
+                <img
+                  class="navbar-icon"
+                  src="./assets/svg/navbar-icon.svg"
+                  alt="Blog | Circco Media"
+                  title="Blog | Circco Media"
+                />
+
+                <div class="navbar-link-rotate">
+                  <span class="navbar-link-first">blog</span>
+                  <span class="navbar-link-second">blog</span>
+                </div>
+              </a>
+
+              <!-- CONTACT -->
+              <a
+                class="navbar-link"
+                href="/contact.html"
+                title="Contact | Circco Media"
+              >
+                <img
+                  class="navbar-icon"
+                  src="./assets/svg/navbar-icon.svg"
+                  alt="Contact | Circco Media"
+                  title="Contact | Circco Media"
+                />
+
+                <div class="navbar-link-rotate">
+                  <span class="navbar-link-first">contact</span>
+                  <span class="navbar-link-second">contact</span>
+                </div>
+              </a>
+
+              <!-- CLOSE MENU -->
+              <div class="close-menu" onclick="onMenu()">
+                <i class="fal fa-times"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- MAIN -->
+    <main>
+
+    <!-- INTERIOR BANNER -->
+    <section>
+      <div class="banner-main-container">
+        <div class="banner-container gPadd main-container ">
+          <h1 class="element"  data-speed="45" animateTitle>estrategia</h1>
+          <div class="banner-title element" data-speed="-45">
+            <h2>/ servicio</h2>
+            <a href="/contacto" title="Contacto | Circco Media">
+              <span>¿Quieres formar parte del circco?  Únete a nosotros <img src="./assets/svg/arrow-color.svg" alt="Contacto | Circco Media" title="Contacto | Circco Media"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+     </section>
+
+    <!-- ABOUT -->
+    <section>
+      <div class="about-main-container">
+        <div class="about-container main-container">
+          <div class="row">
+            <div class="col-lg-4">
+              <!-- ABOUT ITEM -->
+              <div class="about-item about-left">
+                <h2 class="text-section-title">estrategia <br> digital</h2>
+                <p class="text-small">
+                  Damos vida a marcas que conectan, inspiran y dejan huella.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-8">
+              <!-- ABOUT ITEM -->
+              <div class="about-item about-right mt-5 mt-lg-0">
+                <p class="text-large" animateText>En Circco Media, sabemos que una estrategia digital sólida es el corazón de una marca exitosa. En un mundo donde la competencia es feroz y el mercado cambia constantemente, crear una hoja de ruta clara y efectiva es esencial para conectar de manera auténtica con tu audiencia. Nuestro enfoque se basa en estrategias personalizadas, que no solo elevan tu visibilidad, sino que también generan impacto real.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- INTERIOR SECTION -->
+     <section class="interiorSection">
+      <div class="interiorSection-main-container gPadd">
+        <div class="interiorSection-container main-container ">
+          <div class="row">
+            <div class="col-lg-5">
+              <div class="interiorSection-item">
+                <video
+                  style="border-radius: 24px"
+                  width="100%"
+                  height="auto"
+                  playsinline
+                  loop
+                  muted
+                  autoplay
+                  poster="./assets/images/video-cover.png"
+                  title="Video presentación | Circco Media"
+                >
+                  <source
+                    src="./assets/videos/circcodesktop.mp4"
+                    type="video/mp4"
+                  />
+                  <source src="movie.webm" type="video/webm" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+            <div class="col-lg-7">
+              <div class="interiorSection-item ps-lg-5 ps-0">
+                <h3><img class="me-3" style="max-width: 45px"src="/assets/svg/arrow-color.svg" alt="Ilustración digital">  <b>¿Por qué elegirnos para tu Estrategia Digital?</b></h3>
+                
+                <div class="row">
+
+                  <!-- COL 1 -->
+                  <div class="col-lg-4">
+                    <p>En Circco Media, no creemos en soluciones genéricas. Tu marca es única, por lo que desarrollamos estrategias a medida, alineadas con tus valores y objetivos comerciales.</p>
+                    <p class="mt-5"><b>- Visión Integral</b></p>
+                  </div>
+
+                  <!-- COL 2 -->
+                  <div class="col-lg-4">
+                    <p>Cada acción que tomamos está orientada a resultados medibles. Analizamos cada paso del proceso para optimizar y asegurar el éxito de la estrategia.</p>
+                    <p class="mt-5"><b>- Enfoque</b></p>
+                  </div>
+
+                  <!-- COL 3 -->
+                  <div class="col-lg-4">
+                    <p>Nuestra creatividad no es solo estética, sino que tiene un propósito claro: conectar con tu público objetivo, destacar tu marca y diferenciarte de la competencia.</p>
+                    <p class="mt-5"><b>- Creatividad</b></p>
+                  </div>
+
+                </div>
+  
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     </section>
+
+
+     <!-- INTERIOR SECTION -->
+     <section class="interiorSection">
+      <div class="interiorSection-main-container">
+        <div class="interiorSection-container main-container ">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="interiorSection-item">
+                <h3><img class="me-3" style="max-width: 45px;padding-bottom: 24px;"src="/assets/svg/arrow-color.svg" alt="Ilustración digital">  <b>¿Qué Incluye Nuestro Servicio de Estrategia Digital?</b></h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi, a? Quos, similique modi? Eum quae at omnis alias provident odio iste totam eius tempore distinctio atque sunt, neque dolore sapiente.</p>
+              </div>
+            </div>
+            <div class="col-lg-8">
+              <div class="interiorSection-item ps-lg-5 ps-0">
+               <img src="/assets/images/blog-3.jpg" style="max-height: 650px;" alt="">
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+     </section>
+
+     <!-- INTERIOR SECTION -->
+     <section class="interiorSection">
+      <div class="interiorSection-main-container gPadd">
+        <div class="interiorSection-container main-container">
+          <div class="row">
+            <!-- ITEM 1 -->
+            <div class="col-lg-4">
+              <div class="interiorSection-item p-3">
+                <h3>Análisis de Marca y Competencia</h3>
+                <p>Estudiamos el estado actual de tu marca para comprender su identidad, fortalezas y áreas de mejora.</p>
+                <p>Análisis competitivo: investigamos lo que están haciendo tus competidores y cómo podemos mejorar tu posicionamiento.</p>
+              </div>
+            </div>
+            <!-- ITEM 2 -->
+            <div class="col-lg-4">
+              <div class="interiorSection-item p-3">
+                <img src="/assets/images/blog-5.webp" alt="">
+              </div>
+            </div>
+            <!-- ITEM 3 -->
+            <div class="col-lg-4">
+              <div class="interiorSection-item p-3">
+                <h3>Desarrollo de la Estrategia de Contenidos</h3>
+                <p>Creamos una estrategia de contenidos alineada con tu audiencia y los valores de tu marca.</p>
+                <p>Planificamos el contenido de forma estratégica para aumentar el engagement y convertir visitantes en clientes.</p>
+              </div>
+            </div>
+            <!-- ITEM 2 -->
+            <div class="col-lg-4 mt-5">
+              <div class="interiorSection-item p-3">
+                <img src="/assets/images/blog-2.jpg" style="max-height: 350px;" alt="">
+              </div>
+            </div>
+            <!-- ITEM 1 -->
+            <div class="col-lg-4 mt-5">
+              <div class="interiorSection-item p-3">
+                <h3>Optimización de Canales Digitales</h3>
+                <p>Evaluamos y optimizamos tu presencia en canales clave como tu página web, redes sociales, email marketing, y más.</p>
+                <p>Mejoramos tu SEO y UX/UI para aumentar la conversión y la experiencia de usuario en cada punto de contacto.</p>
+                 </div>
+            </div>
+            
+            <!-- ITEM 3 -->
+            <div class="col-lg-4 mt-5">
+              <div class="interiorSection-item p-3">
+                <h3>Estrategia de Medios Pagados (Paid Media)</h3>
+                <p>Si lo que buscas es acelerar tu presencia, gestionamos campañas de publicidad digital para alcanzar a tu público objetivo de manera efectiva.</p>
+                <p>Optimización continua de tus campañas de Google Ads, Facebook Ads, Instagram Ads, entre otras.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     </section>
+
+      <!-- INTERIOR SECTION -->
+      <section class="interiorSection">
+        <div class="interiorSection-main-container">
+          <div class="interiorSection-container main-container ">
+            <div class="row">
+              <div class="col-lg-7">
+                <div class="interiorSection-item">
+                 <img src="/assets/images/blog-4.jpg" alt="">
+                </div>
+              </div>
+              <div class="col-lg-5">
+                <div class="interiorSection-item ps-lg-5 ps-0">
+                  <h3><img class="me-3" style="max-width: 45px;padding-bottom: 24px;"src="/assets/svg/arrow-color.svg" alt="Ilustración digital">  <b>Nuestro Proceso</b></h3>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi, a? Quos, similique modi? Eum quae at omnis alias provident odio iste totam eius tempore distinctio atque sunt, neque dolore sapiente.</p>
+
+
+                  <ul style="max-width: 100%;">
+                    <li class="li-style">
+                      <div class="d-flex w-100" style="justify-content: space-between;">
+                        <h4>investigación profunda</h4>
+                        <span><em>1</em></span>
+                      </div>
+                      <small>Nos tomamos el tiempo necesario para entender tu empresa, tus metas y tu mercado.</small>
+                    </li>
+                    <li class="li-style">
+                      <div class="d-flex w-100" style="justify-content: space-between;">
+                        <h4>planteamiento estratégico</h4>
+                        <span><em>2</em></span>
+                      </div>
+                      <small>Utilizamos los insights de la investigación para desarrollar un plan claro, con pasos definidos y alineados con tus objetivos.</small>
+                    </li>
+                    <li class="li-style">
+                      <div class="d-flex w-100" style="justify-content: space-between;">
+                        <h4>investigación Profunda</h4>
+                        <span><em>3</em></span>
+                      </div>
+                      <small>Ejecutamos la estrategia en todos los canales adecuados, asegurando que cada táctica se alinee con la visión global.</small>
+                    </li>
+                    <li class="li-style">
+                      <div class="d-flex w-100" style="justify-content: space-between;">
+                        <h4>monitoreo y Optimización</h4>
+                        <span><em>4</em></span>
+                      </div>
+                      <small>Nuestro trabajo no termina con la implementación; medimos constantemente el rendimiento y ajustamos las tácticas en tiempo real.</small>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+       </section>
+
+
+
+
+      <!-- NEWSLETTER -->
+      <section>
+        <div class="newsletter-main-container">
+          <div class="newsletter-container gPadd">
+            <div class="row">
+              <div class="col-lg-10">
+                <!-- NEWSLETTER ITEM -->
+                <div class="newsletter-item">
+                  <p class="text-small mb-5">
+                    Una agencia DÓNDE <br />LAS MARCAS COBRAN VIDA 🤍
+                  </p>
+                  <a
+                    data-cursor="newsletterPointer"
+                    href="mailto:hola@circcomedia.com"
+                    title="Enviar email | Circco Media"
+                  >
+                    hola@circcomedia.com
+
+                    <img
+                      src="./assets/svg/arrow-color.svg"
+                      alt="Enviar email | Circco Media"
+                      title="Enviar email | Circco Media"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer-wrapper">
+      <div class="footer-main-container">
+        <!-- FOOTER CONTAINER -->
+        <div class="footer-container main-container">
+          <!-- FOOTER ITEM -->
+          <div class="footer-item">
+            <div class="footer-legal">
+              <a
+                href="/politica-de-cookies"
+                title="Política de Cookies | Circco Media"
+                >COOKIES</a
+              >
+              <a href="/aviso-legal" title="Aviso Legal | Circco Media"
+                >LEGAL</a
+              >
+              <a
+                href="/politica-de-privacidad"
+                title="Política de Privacidad | Circco Media"
+                >PRIVACIDAD</a
+              >
+            </div>
+            <p class="mb-0">© TODOS LOS DERECHOS RESERVADOS, CIRCCO 2025</p>
+          </div>
+          <!-- FOOTER ITEM -->
+          <div class="footer-item">
+            <div class="footer-links">
+              <a href="" class="footer-link" title="Instagram | Circco Media"
+                >Instagram</a
+              >
+              <a href="" class="footer-link" title="Youtube | Circco Media"
+                >Youtube</a
+              >
+              <a href="" class="footer-link" title="Linkedin | Circco Media"
+                >Linkedin</a
+              >
+              <a
+                href="mailto:hola@circcomedia.com"
+                class="footer-link"
+                title="hola@circcomedia.com | Circco Media"
+                >hola@circcomedia.com</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- FOOTER DECO -->
+        <div class="footer-deco">
+          <h2>circco.</h2>
+        </div>
+      </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" integrity="sha384-P2YxR2FqF..." crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+    <script src="/gsap/minified/gsap.min.js"></script>
+    <script src="/gsap/minified/ScrollTrigger.min.js"></script>
+    <script src="/gsap/minified/TextPlugin.min.js"></script>
+
+    <script src="/scripts/gsap.js"></script>
+    <script src="/bootstrap-5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/scripts/app.js"></script>
+    <script src="/scripts/cursor.js"></script>
+
+    <script>
+      Fancybox.bind("[data-fancybox]", {});
+    </script>
+  </body>
+</html>

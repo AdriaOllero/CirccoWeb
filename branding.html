@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agencia Digital | Circco Media</title>
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="icon" href="./assets/svg/favicon.svg" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+
+    <style>
+      body {
+        overflow-x: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Cursor -->
+    <div id="cursor-border"></div>
+    <div class="d-none" id="cursor"></div>
+
+    <!-- NAVBAR -->
+    <nav>
+      <div class="navbar-main-container">
+        <div class="navbar-container main-container">
+          <!-- NAVBAR ITEM -->
+          <div class="navbar-item">
+            <!--LOGO -->
+            <div class="logo-container">
+              <a
+                class="logo"
+                href="/"
+                title="Agencia Digital | Circco Media"
+                data-cursor="pointer"
+              >
+                <!-- <img
+                  src="./assets/svg/logo-text.svg"
+                  alt="Agencia Digital | Circco Media"
+                  title="Agencia Digital | Circco Media"
+                /> -->
+
+                <img
+                  width="30"
+                  height="30"
+                  src="./assets/svg/letters/c.svg"
+                  alt="Agencia Digital | Circco Media"
+                  title="Agencia Digital | Circco Media"
+                />
+                <img
+                  width="15"
+                  height="30"
+                  src="./assets/svg/letters/i.svg"
+                  alt="Agencia Digital | Circco Media"
+                  title="Agencia Digital | Circco Media"
+                />
+                <img
+                  width="30"
+                  height="30"
+                  src="./assets/svg/letters/r.svg"
+                  alt="Agencia Digital | Circco Media"
+                  title="Agencia Digital | Circco Media"
+                />
+                <img
+                  style="margin-left: -4px"
+                  width="30"
+                  height="30"
+                  src="./assets/svg/letters/c.svg"
+                  alt="Agencia Digital | Circco Media"
+                  title="Agencia Digital | Circco Media"
+                />
+                <img
+                  width="30"
+                  height="30"
+                  src="./assets/svg/letters/c.svg"
+                  alt="Agencia Digital | Circco Media"
+                  title="Agencia Digital | Circco Media"
+                />
+                <img
+                  width="30"
+                  height="30"
+                  src="./assets/svg/letters/o.svg"
+                  alt="Agencia Digital | Circco Media"
+                  title="Agencia Digital | Circco Media"
+                />
+                <img
+                  width="10"
+                  height="10"
+                  src="./assets/svg/letters/point.svg"
+                  alt="Agencia Digital | Circco Media"
+                  title="Agencia Digital | Circco Media"
+                />
+              </a>
+            </div>
+          </div>
+          <!-- NAVBAR ITEM -->
+          <div class="navbar-item">
+            <!-- MOBILE MENU -->
+            <div class="mobile-menu-container" onclick="onMenu()">
+              <i class="fal fa-bars"></i>
+            </div>
+
+            <div class="navbar-links-container" id="navbar">
+              <!-- WORKS -->
+              <a class="navbar-link" href="/works.html" title="Works | Circco Media">
+                <img
+                  class="navbar-icon"
+                  src="./assets/svg/navbar-icon.svg"
+                  alt="Works | Circco Media"
+                  title="Works | Circco Media"
+                />
+                <div class="navbar-link-rotate">
+                  <span class="navbar-link-first">works</span>
+                  <span class="navbar-link-second">works</span>
+                </div>
+              </a>
+
+              <!-- SERVICES -->
+              <a
+                class="navbar-link"
+                href="/services.html"
+                title="Services | Circco Media"
+              >
+                <img
+                  class="navbar-icon"
+                  src="./assets/svg/navbar-icon.svg"
+                  alt="Services | Circco Media"
+                  title="Services | Circco Media"
+                />
+                <div class="navbar-link-rotate">
+                  <span class="navbar-link-first">services</span>
+                  <span class="navbar-link-second">services</span>
+                </div>
+              </a>
+
+              <!-- ABOUT -->
+              <a class="navbar-link" href="/about.html" title="About | Circco Media">
+                <img
+                  class="navbar-icon"
+                  src="./assets/svg/navbar-icon.svg"
+                  alt="About | Circco Media"
+                  title="About | Circco Media"
+                />
+
+                <div class="navbar-link-rotate">
+                  <span class="navbar-link-first">about</span>
+                  <span class="navbar-link-second">about</span>
+                </div>
+              </a>
+
+              <!-- BLOG -->
+              <a
+                class="navbar-link"
+                href="/blog.html"
+                title="Blog | Circco Media"
+              >
+                <img
+                  class="navbar-icon"
+                  src="./assets/svg/navbar-icon.svg"
+                  alt="Blog | Circco Media"
+                  title="Blog | Circco Media"
+                />
+
+                <div class="navbar-link-rotate">
+                  <span class="navbar-link-first">blog</span>
+                  <span class="navbar-link-second">blog</span>
+                </div>
+              </a>
+
+              <!-- CONTACT -->
+              <a
+                class="navbar-link"
+                href="/contact.html"
+                title="Contact | Circco Media"
+              >
+                <img
+                  class="navbar-icon"
+                  src="./assets/svg/navbar-icon.svg"
+                  alt="Contact | Circco Media"
+                  title="Contact | Circco Media"
+                />
+
+                <div class="navbar-link-rotate">
+                  <span class="navbar-link-first">contact</span>
+                  <span class="navbar-link-second">contact</span>
+                </div>
+              </a>
+
+              <!-- CLOSE MENU -->
+              <div class="close-menu" onclick="onMenu()">
+                <i class="fal fa-times"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- MAIN -->
+    <main>
+
+    <!-- INTERIOR BANNER -->
+    <section>
+      <div class="banner-main-container">
+        <div class="banner-container gPadd main-container ">
+          <h1 class="element"  data-speed="45" animateTitle>branding</h1>
+          <div class="banner-title element" data-speed="-45">
+            <h2>/ servicio</h2>
+            <a href="/contacto" title="Contacto | Circco Media">
+              <span>¿Quieres formar parte del circco?  Únete a nosotros <img src="./assets/svg/arrow-color.svg" alt="Contacto | Circco Media" title="Contacto | Circco Media"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+     </section>
+
+    <!-- ABOUT -->
+    <section>
+      <div class="about-main-container">
+        <div class="about-container main-container">
+          <div class="row">
+            <div class="col-lg-4">
+              <!-- ABOUT ITEM -->
+              <div class="about-item about-left">
+                <h2 class="text-section-title">branding</h2>
+                <p class="text-small">
+                  Damos vida a marcas que conectan, inspiran y dejan huella.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-8">
+              <!-- ABOUT ITEM -->
+              <div class="about-item about-right mt-5 mt-lg-0">
+                <p class="text-large" animateText>En Circco Media, creemos que el branding es mucho más que un logo bonito. Es la personalidad de tu marca, la manera en que te comunicas con el mundo y la experiencia que ofreces a tu audiencia. Un branding bien construido es la base sobre la cual se construye todo lo demás: desde el diseño web hasta la estrategia de marketing digital. Si quieres conectar de manera auténtica con tu público y destacar entre la multitud, un branding potente es clave.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- INTERIOR SECTION -->
+     <section class="interiorSection">
+      <div class="interiorSection-main-container gPadd">
+        <div class="interiorSection-container main-container ">
+          <div class="row">
+            <div class="col-lg-7">
+              <div class="interiorSection-item ps-lg-5 ps-0">
+                <h3><img class="me-3" style="max-width: 45px"src="/assets/svg/arrow-color.svg" alt="Ilustración digital">  <b>¿Por qué Elegirnos para Tu Branding?</b></h3>
+                
+                <div class="row">
+
+                  <!-- COL 1 -->
+                  <div class="col-lg-4">
+                    <p>Te ayudamos a crear una identidad visual única que te haga destacar, reflejando los valores de tu marca de manera auténtica.</p>
+                    <p class="mt-5"><b>- Autenticidad y Diferenciación</b></p>
+                  </div>
+
+                  <!-- COL 2 -->
+                  <div class="col-lg-4">
+                    <p>Sabemos que las primeras impresiones cuentan, por eso nos aseguramos de que tu imagen de marca sea memorable y impactante.</p>
+                    <p class="mt-5"><b>- Impacto Visual</b></p>
+                  </div>
+
+                  <!-- COL 3 -->
+                  <div class="col-lg-4">
+                    <p>No solo creamos una estética, sino que diseñamos para conectar emocionalmente con tu audiencia. Queremos que tu marca no solo sea vista, sino que también sea sentida.</p>
+                    <p class="mt-5"><b>- Conexión Emocional</b></p>
+                  </div>
+
+                </div>
+  
+              </div>
+            </div>
+            <div class="col-lg-5">
+              <div class="interiorSection-item">
+                <img src="/assets/images/blog-7.png" alt="">
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+     </section>
+
+
+     <!-- INTERIOR SECTION -->
+     <section class="interiorSection">
+      <div class="interiorSection-main-container">
+        <div class="interiorSection-container main-container ">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="interiorSection-item">
+                <h3><img class="me-3" style="max-width: 45px;padding-bottom: 24px;"src="/assets/svg/arrow-color.svg" alt="Ilustración digital">  <b>¿Qué Incluye Nuestro Servicio de Branding?</b></h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi, a? Quos, similique modi? Eum quae at omnis alias provident odio iste totam eius tempore distinctio atque sunt, neque dolore sapiente.</p>
+              </div>
+            </div>
+            <div class="col-lg-8">
+              <div class="interiorSection-item ps-lg-5 ps-0">
+               <img src="/assets/images/blog-8.png" style="max-height: 650px;" alt="">
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+     </section>
+
+     <!-- INTERIOR SECTION -->
+     <section class="interiorSection">
+      <div class="interiorSection-main-container gPadd">
+        <div class="interiorSection-container main-container">
+          <div class="row">
+            
+            <!-- ITEM 2 -->
+            <div class="col-lg-4">
+              <div class="interiorSection-item p-3">
+                <img src="/assets/images/blog-9.jpg" alt="">
+              </div>
+            </div>
+            <!-- ITEM 1 -->
+            <div class="col-lg-4">
+              <div class="interiorSection-item p-3">
+                <h3>Investigación y Análisis de Marca</h3>
+                <p>Antes de crear cualquier elemento visual, realizamos una investigación exhaustiva sobre tu mercado, tu público objetivo y tu competencia.</p>
+                <p>Analizamos la personalidad de tu marca para asegurar que tu identidad visual refleje lo que realmente eres.</p>
+              </div>
+            </div>
+            <!-- ITEM 3 -->
+            <div class="col-lg-4">
+              <div class="interiorSection-item p-3">
+                <h3>Desarrollo de Identidad Visual</h3>
+                <p>Creamos una identidad visual coherente que incluya:</p>
+                <ul>
+                  <li>
+                    <em>Logotipo</em>
+                    <p>Un diseño único que capture la esencia de tu marca.</p>
+                  </li>
+                  <li>
+                    <em>Paleta de Colores</em>
+                    <p>Elegimos colores que transmitan los valores y la personalidad de tu marca.</p>
+                  </li>
+                  <li>
+                    <em>Tipografía</em>
+                    <p>Seleccionamos fuentes que aseguren legibilidad y coherencia en todos tus materiales de comunicación.</p>
+                  </li>
+                  <li>
+                    <em>Iconografía y Elementos Gráficos</em>
+                    <p>Creamos elementos visuales que complementen tu logotipo y fortalezcan tu mensaje.</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+            <!-- ITEM 1 -->
+            <div class="col-lg-4 mt-5">
+              <div class="interiorSection-item p-3">
+                <h3>Creación de Manual de Marca</h3>
+                <p>Desarrollamos un manual de marca que define cómo usar tu identidad visual en cualquier plataforma, desde tu sitio web hasta tus redes sociales.</p>
+                <p>El manual incluye directrices claras sobre el uso de tu logotipo, colores, tipografía y tono de voz, asegurando coherencia en todos tus puntos de contacto.</p>
+                 </div>
+            </div>
+            
+            <!-- ITEM 3 -->
+            <div class="col-lg-4 mt-5">
+              <div class="interiorSection-item p-3">
+                <h3>Diseño de Materiales de Comunicación</h3>
+                <p>Desde tarjetas de presentación hasta presentaciones, diseñamos todos los materiales visuales que tu marca necesita para transmitir una imagen coherente y profesional.</p>
+                <p>Aseguramos que cada material cumpla con los estándares de tu manual de marca.</p>
+              </div>
+            </div>
+
+            <!-- ITEM 2 -->
+            <div class="col-lg-4 mt-5">
+              <div class="interiorSection-item p-3">
+                <img src="/assets/images/blog-6.png" style="max-height: 350px;" alt="">
+              </div>
+            </div>
+
+            <!-- ITEM 3 -->
+            <div class="col-lg-4 mt-5">
+              <div class="interiorSection-item p-3">
+                <h3>Diseño Web y UX/UI</h3>
+                <p>Aplicamos tu identidad visual al diseño de tu sitio web, asegurando que cada página sea visualmente atractiva y fácil de navegar.</p>
+                <p>Nos centramos en una experiencia de usuario (UX) intuitiva, con un diseño de interfaz (UI) que garantice la conversión.</p>
+              </div>
+            </div>
+
+            <!-- ITEM 2 -->
+            <div class="col-lg-4 mt-5">
+              <div class="interiorSection-item p-3">
+                <img src="/assets/images/blog-10.jpg" style="max-height: 350px;" alt="">
+              </div>
+            </div>
+
+            <!-- ITEM 3 -->
+            <div class="col-lg-4 mt-5">
+              <div class="interiorSection-item p-3">
+                <h3>Estrategia de Marca</h3>
+                <p>Te ayudamos a desarrollar una estrategia de marca que te permita comunicar tu mensaje de manera efectiva en todos los canales.</p>
+                <p>Alineamos tu estrategia de branding con tus objetivos comerciales, para que cada acción y comunicación sea coherente y efectiva.</p>
+              </div>
+            </div>
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+     </section>
+
+      <!-- INTERIOR SECTION -->
+      <section class="interiorSection">
+        <div class="interiorSection-main-container">
+          <div class="interiorSection-container main-container ">
+            <div class="row">
+              <div class="col-lg-7">
+                <div class="interiorSection-item">
+                 <img src="/assets/images/blog-11.jpg" alt="">
+                </div>
+              </div>
+              <div class="col-lg-5">
+                <div class="interiorSection-item ps-lg-5 ps-0">
+                  <h3><img class="me-3" style="max-width: 45px;padding-bottom: 24px;"src="/assets/svg/arrow-color.svg" alt="Ilustración digital">  <b>Nuestro Proceso</b></h3>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi, a? Quos, similique modi? Eum quae at omnis alias provident odio iste totam eius tempore distinctio atque sunt, neque dolore sapiente.</p>
+
+
+                  <ul style="max-width: 100%;">
+                    <li class="li-style">
+                      <div class="d-flex w-100" style="justify-content: space-between;">
+                        <h4>Investigación y Briefing</h4>
+                        <span><em>1</em></span>
+                      </div>
+                      <small>Comenzamos con una sesión de briefing para comprender a fondo tu negocio, tus valores y tus metas. A partir de aquí, realizamos una investigación detallada para conocer el mercado y las expectativas de tu público.</small>
+                    </li>
+                    <li class="li-style">
+                      <div class="d-flex w-100" style="justify-content: space-between;">
+                        <h4>Conceptualización de la Identidad</h4>
+                        <span><em>2</em></span>
+                      </div>
+                      <small>Desarrollamos varias propuestas de identidad visual, basadas en los resultados de nuestra investigación, que refuercen la personalidad de tu marca.</small>
+                    </li>
+                    <li class="li-style">
+                      <div class="d-flex w-100" style="justify-content: space-between;">
+                        <h4>Diseño y Refinamiento</h4>
+                        <span><em>3</em></span>
+                      </div>
+                      <small>Elegimos el concepto más adecuado y comenzamos a trabajar en los detalles, refinando cada elemento visual para asegurar su perfección.</small>
+                    </li>
+                    <li class="li-style">
+                      <div class="d-flex w-100" style="justify-content: space-between;">
+                        <h4>Implementación</h4>
+                        <span><em>4</em></span>
+                      </div>
+                      <small>Aplicamos tu nueva identidad visual a todos los puntos de contacto de tu marca, incluyendo tu sitio web, redes sociales, materiales impresos y más.</small>
+                    </li>
+                    <li class="li-style">
+                      <div class="d-flex w-100" style="justify-content: space-between;">
+                        <h4>Entrega y Soporte</h4>
+                        <span><em>5</em></span>
+                      </div>
+                      <small>Te entregamos todos los archivos necesarios, incluyendo un manual de marca completo, y ofrecemos soporte para que implementes tu nueva identidad visual sin problemas.</small>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+       </section>
+
+
+
+
+      <!-- NEWSLETTER -->
+      <section>
+        <div class="newsletter-main-container">
+          <div class="newsletter-container gPadd">
+            <div class="row">
+              <div class="col-lg-10">
+                <!-- NEWSLETTER ITEM -->
+                <div class="newsletter-item">
+                  <p class="text-small mb-5">
+                    Una agencia DÓNDE <br />LAS MARCAS COBRAN VIDA 🤍
+                  </p>
+                  <a
+                    data-cursor="newsletterPointer"
+                    href="mailto:hola@circcomedia.com"
+                    title="Enviar email | Circco Media"
+                  >
+                    hola@circcomedia.com
+
+                    <img
+                      src="./assets/svg/arrow-color.svg"
+                      alt="Enviar email | Circco Media"
+                      title="Enviar email | Circco Media"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer-wrapper">
+      <div class="footer-main-container">
+        <!-- FOOTER CONTAINER -->
+        <div class="footer-container main-container">
+          <!-- FOOTER ITEM -->
+          <div class="footer-item">
+            <div class="footer-legal">
+              <a
+                href="/politica-de-cookies"
+                title="Política de Cookies | Circco Media"
+                >COOKIES</a
+              >
+              <a href="/aviso-legal" title="Aviso Legal | Circco Media"
+                >LEGAL</a
+              >
+              <a
+                href="/politica-de-privacidad"
+                title="Política de Privacidad | Circco Media"
+                >PRIVACIDAD</a
+              >
+            </div>
+            <p class="mb-0">© TODOS LOS DERECHOS RESERVADOS, CIRCCO 2025</p>
+          </div>
+          <!-- FOOTER ITEM -->
+          <div class="footer-item">
+            <div class="footer-links">
+              <a href="" class="footer-link" title="Instagram | Circco Media"
+                >Instagram</a
+              >
+              <a href="" class="footer-link" title="Youtube | Circco Media"
+                >Youtube</a
+              >
+              <a href="" class="footer-link" title="Linkedin | Circco Media"
+                >Linkedin</a
+              >
+              <a
+                href="mailto:hola@circcomedia.com"
+                class="footer-link"
+                title="hola@circcomedia.com | Circco Media"
+                >hola@circcomedia.com</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- FOOTER DECO -->
+        <div class="footer-deco">
+          <h2>circco.</h2>
+        </div>
+      </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" integrity="sha384-P2YxR2FqF..." crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+    <script src="/gsap/minified/gsap.min.js"></script>
+    <script src="/gsap/minified/ScrollTrigger.min.js"></script>
+    <script src="/gsap/minified/TextPlugin.min.js"></script>
+
+    <script src="/scripts/gsap.js"></script>
+    <script src="/bootstrap-5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/scripts/app.js"></script>
+    <script src="/scripts/cursor.js"></script>
+
+    <script>
+      Fancybox.bind("[data-fancybox]", {});
+    </script>
+  </body>
+</html>

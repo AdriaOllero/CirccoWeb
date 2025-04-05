@@ -2,6 +2,9 @@
   height: 100vh;
   overflow: hidden;
   .video-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     a {
       text-decoration: none;
       video {
