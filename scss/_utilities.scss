@@ -234,6 +234,16 @@ td {
   .especial-text-padd {
     padding-block: 0px 124px;
   }
+
+  .interiorSection {
+    .interiorSection-item {
+      padding-bottom: 32px;
+      img {
+        display: block;
+        padding-bottom: 32px;
+      }
+    }
+  }
 }
 
 .glitch {

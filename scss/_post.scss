@@ -1,6 +1,8 @@
 .post-main-container {
+  width: 100%;
   .post-container {
     max-width: 75vw;
+    margin: 0 auto;
     .post-item {
       position: relative;
       height: 100%;
@@ -59,6 +61,25 @@
           color: $white-color;
           margin-bottom: 16px;
           font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .post-main-container {
+    .post-container {
+      max-width: 90vw;
+
+      .post-item {
+        .post-info {
+          .share-main-container {
+            margin-bottom: 64px;
+          }
+        }
+        .post-content {
+          padding-left: initial;
         }
       }
     }

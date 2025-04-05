@@ -5,9 +5,9 @@
     justify-content: center;
     width: fit-content;
     h1 {
-      font-size: 164px;
+      font-size: clamp(64px, 8.54vw, 164px);
       text-align: center;
-      line-height: 144px;
+      line-height: clamp(64px, 8.54vw, 144px);
       color: $white-color;
     }
 
@@ -38,4 +38,17 @@
       }
     }
   }
+}
+
+@media only screen and (max-width: 1024px) {
+  .banner-main-container {
+    .banner-container {
+      flex-direction: column;
+    }
+  }
+}
+
+.post-banner-title {
+  font-size: clamp(46px, 8.54vw, 164px) !important;
+  line-height: clamp(46px, 8.54vw, 144px) !important;
 }

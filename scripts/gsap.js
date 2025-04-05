@@ -323,19 +323,21 @@ gsap.from("[animateTitle] .char", {
 });
 
 ///// SERVICE TITLE /////
-let typeServiceSplit = new SplitType("[animateServiceTitle]", {
-  types: "lines, words, chars",
-  tagName: "span",
-});
+if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+  let typeServiceSplit = new SplitType("[animateServiceTitle]", {
+    types: "lines, words, chars",
+    tagName: "span",
+  });
 
-gsap.from("[animateServiceTitle] .line", {
-  y: "110%",
-  opacity: 1,
-  rotationZ: "0",
-  duration: 1,
-  ease: "power1.out",
-  stagger: 0.1,
-});
+  gsap.from("[animateServiceTitle] .line", {
+    y: "110%",
+    opacity: 1,
+    rotationZ: "0",
+    duration: 1,
+    ease: "power1.out",
+    stagger: 0.1,
+  });
+}
 
 ///// SERVICE TITLE /////
 let typeSplitText = new SplitType("[animateText]", {
