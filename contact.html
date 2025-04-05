@@ -25,152 +25,181 @@
     <div id="cursor-border"></div>
     <div class="d-none" id="cursor"></div>
 
-    <!-- NAVBAR -->
-    <nav>
-      <div class="navbar-main-container">
-        <div class="navbar-container main-container">
-          <!-- NAVBAR ITEM -->
-          <div class="navbar-item">
-            <!--LOGO -->
-            <div class="logo-container">
-              <a
-                class="logo"
-                href="/"
+   <!-- NAVBAR -->
+   <nav>
+    <div class="navbar-main-container">
+      <div class="navbar-container main-container">
+        <!-- NAVBAR ITEM -->
+        <div class="navbar-item">
+          <!--LOGO -->
+          <div class="logo-container">
+            <a
+              class="logo"
+              href="/"
+              title="Agencia Digital | Circco Media"
+              data-cursor="pointer"
+            >
+              <!-- <img
+                src="./assets/svg/logo-text.svg"
+                alt="Agencia Digital | Circco Media"
                 title="Agencia Digital | Circco Media"
-                data-cursor="pointer"
-              >
-                <!-- <img
-                  src="./assets/svg/logo-text.svg"
-                  alt="Agencia Digital | Circco Media"
-                  title="Agencia Digital | Circco Media"
-                /> -->
+              /> -->
 
-                <img
-                  width="30"
-                  height="30"
-                  src="./assets/svg/letters/c.svg"
-                  alt="Agencia Digital | Circco Media"
-                  title="Agencia Digital | Circco Media"
-                />
-                <img
-                  width="15"
-                  height="30"
-                  src="./assets/svg/letters/i.svg"
-                  alt="Agencia Digital | Circco Media"
-                  title="Agencia Digital | Circco Media"
-                />
-                <img
-                  width="30"
-                  height="30"
-                  src="./assets/svg/letters/r.svg"
-                  alt="Agencia Digital | Circco Media"
-                  title="Agencia Digital | Circco Media"
-                />
-                <img
-                  style="margin-left: -4px"
-                  width="30"
-                  height="30"
-                  src="./assets/svg/letters/c.svg"
-                  alt="Agencia Digital | Circco Media"
-                  title="Agencia Digital | Circco Media"
-                />
-                <img
-                  width="30"
-                  height="30"
-                  src="./assets/svg/letters/c.svg"
-                  alt="Agencia Digital | Circco Media"
-                  title="Agencia Digital | Circco Media"
-                />
-                <img
-                  width="30"
-                  height="30"
-                  src="./assets/svg/letters/o.svg"
-                  alt="Agencia Digital | Circco Media"
-                  title="Agencia Digital | Circco Media"
-                />
-                <img
-                  width="10"
-                  height="10"
-                  src="./assets/svg/letters/point.svg"
-                  alt="Agencia Digital | Circco Media"
-                  title="Agencia Digital | Circco Media"
-                />
-              </a>
-            </div>
+              <img
+                width="30"
+                height="30"
+                src="./assets/svg/letters/c.svg"
+                alt="Agencia Digital | Circco Media"
+                title="Agencia Digital | Circco Media"
+              />
+              <img
+                width="15"
+                height="30"
+                src="./assets/svg/letters/i.svg"
+                alt="Agencia Digital | Circco Media"
+                title="Agencia Digital | Circco Media"
+              />
+              <img
+                width="30"
+                height="30"
+                src="./assets/svg/letters/r.svg"
+                alt="Agencia Digital | Circco Media"
+                title="Agencia Digital | Circco Media"
+              />
+              <img
+                style="margin-left: -4px"
+                width="30"
+                height="30"
+                src="./assets/svg/letters/c.svg"
+                alt="Agencia Digital | Circco Media"
+                title="Agencia Digital | Circco Media"
+              />
+              <img
+                width="30"
+                height="30"
+                src="./assets/svg/letters/c.svg"
+                alt="Agencia Digital | Circco Media"
+                title="Agencia Digital | Circco Media"
+              />
+              <img
+                width="30"
+                height="30"
+                src="./assets/svg/letters/o.svg"
+                alt="Agencia Digital | Circco Media"
+                title="Agencia Digital | Circco Media"
+              />
+              <img
+                width="10"
+                height="10"
+                src="./assets/svg/letters/point.svg"
+                alt="Agencia Digital | Circco Media"
+                title="Agencia Digital | Circco Media"
+              />
+            </a>
           </div>
-          <!-- NAVBAR ITEM -->
-          <div class="navbar-item">
-            <div class="navbar-links-container">
-              <!-- WORKS -->
-              <a class="navbar-link" href="/works" title="Works | Circco Media">
-                <img
-                  class="navbar-icon"
-                  src="./assets/svg/navbar-icon.svg"
-                  alt="Works | Circco Media"
-                  title="Works | Circco Media"
-                />
-                <div class="navbar-link-rotate">
-                  <span class="navbar-link-first">works</span>
-                  <span class="navbar-link-second">works</span>
-                </div>
-              </a>
+        </div>
+        <!-- NAVBAR ITEM -->
+        <div class="navbar-item">
+          <!-- MOBILE MENU -->
+          <div class="mobile-menu-container" onclick="onMenu()">
+            <i class="fal fa-bars"></i>
+          </div>
 
-              <!-- SERVICES -->
-              <a
-                class="navbar-link"
-                href="/services"
+          <div class="navbar-links-container" id="navbar">
+            <!-- WORKS -->
+            <a class="navbar-link" href="/works.html" title="Works | Circco Media">
+              <img
+                class="navbar-icon"
+                src="./assets/svg/navbar-icon.svg"
+                alt="Works | Circco Media"
+                title="Works | Circco Media"
+              />
+              <div class="navbar-link-rotate">
+                <span class="navbar-link-first">works</span>
+                <span class="navbar-link-second">works</span>
+              </div>
+            </a>
+
+            <!-- SERVICES -->
+            <a
+              class="navbar-link"
+              href="/services.html"
+              title="Services | Circco Media"
+            >
+              <img
+                class="navbar-icon"
+                src="./assets/svg/navbar-icon.svg"
+                alt="Services | Circco Media"
                 title="Services | Circco Media"
-              >
-                <img
-                  class="navbar-icon"
-                  src="./assets/svg/navbar-icon.svg"
-                  alt="Services | Circco Media"
-                  title="Services | Circco Media"
-                />
-                <div class="navbar-link-rotate">
-                  <span class="navbar-link-first">services</span>
-                  <span class="navbar-link-second">services</span>
-                </div>
-              </a>
+              />
+              <div class="navbar-link-rotate">
+                <span class="navbar-link-first">services</span>
+                <span class="navbar-link-second">services</span>
+              </div>
+            </a>
 
-              <!-- ABOUT -->
-              <a class="navbar-link" href="/about" title="About | Circco Media">
-                <img
-                  class="navbar-icon"
-                  src="./assets/svg/navbar-icon.svg"
-                  alt="About | Circco Media"
-                  title="About | Circco Media"
-                />
+            <!-- ABOUT -->
+            <a class="navbar-link" href="/about.html" title="About | Circco Media">
+              <img
+                class="navbar-icon"
+                src="./assets/svg/navbar-icon.svg"
+                alt="About | Circco Media"
+                title="About | Circco Media"
+              />
 
-                <div class="navbar-link-rotate">
-                  <span class="navbar-link-first">about</span>
-                  <span class="navbar-link-second">about</span>
-                </div>
-              </a>
+              <div class="navbar-link-rotate">
+                <span class="navbar-link-first">about</span>
+                <span class="navbar-link-second">about</span>
+              </div>
+            </a>
 
-              <!-- CONTACT -->
-              <a
-                class="navbar-link"
-                href="/contact"
+            <!-- BLOG -->
+            <a
+              class="navbar-link"
+              href="/blog.html"
+              title="Blog | Circco Media"
+            >
+              <img
+                class="navbar-icon"
+                src="./assets/svg/navbar-icon.svg"
+                alt="Blog | Circco Media"
+                title="Blog | Circco Media"
+              />
+
+              <div class="navbar-link-rotate">
+                <span class="navbar-link-first">blog</span>
+                <span class="navbar-link-second">blog</span>
+              </div>
+            </a>
+
+            <!-- CONTACT -->
+            <a
+              class="navbar-link"
+              href="/contact.html"
+              title="Contact | Circco Media"
+            >
+              <img
+                class="navbar-icon"
+                src="./assets/svg/navbar-icon.svg"
+                alt="Contact | Circco Media"
                 title="Contact | Circco Media"
-              >
-                <img
-                  class="navbar-icon"
-                  src="./assets/svg/navbar-icon.svg"
-                  alt="Contact | Circco Media"
-                  title="Contact | Circco Media"
-                />
+              />
 
-                <div class="navbar-link-rotate">
-                  <span class="navbar-link-first">contact</span>
-                  <span class="navbar-link-second">contact</span>
-                </div>
-              </a>
+              <div class="navbar-link-rotate">
+                <span class="navbar-link-first">contact</span>
+                <span class="navbar-link-second">contact</span>
+              </div>
+            </a>
+
+            <!-- CLOSE MENU -->
+            <div class="close-menu" onclick="onMenu()">
+              <i class="fal fa-times"></i>
             </div>
           </div>
         </div>
       </div>
-    </nav>
+    </div>
+  </nav>
 
     <!-- MAIN -->
     <main>

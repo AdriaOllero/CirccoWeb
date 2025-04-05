@@ -160,3 +160,47 @@ td {
     padding-block: 0px 124px;
   }
 }
+
+.glitch {
+  position: relative;
+  &::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 2px;
+    text-shadow: -1px 0 red;
+    top: 0;
+    background-color: $black-color;
+    overflow: hidden;
+    clip: rect(0, 900px, 0, 0);
+    animation: animate-glitch 3s infinite linear alternate-reverse;
+  }
+
+  &::before {
+    content: attr(data-text);
+    position: absolute;
+    left: 2px;
+    text-shadow: -1px 0 blue;
+    top: 0;
+    background-color: $black-color;
+    overflow: hidden;
+    clip: rect(0, 900px, 0, 0);
+    animation: animate-glitch 2s infinite linear alternate-reverse;
+  }
+}
+
+@keyframes animate-glitch {
+  0% {
+    clip: rect(99px, 9999px, 45px 0);
+  }
+
+  5% {
+    clip: rect(7px, 9999px, 49px 0);
+  }
+
+  10% {
+    clip: rect(52px, 9999px, 79px 0);
+  }
+  15% {
+    clip: rect(37px, 9999px, 43px 0);
+  }
+}

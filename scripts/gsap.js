@@ -143,66 +143,84 @@ document.addEventListener("DOMContentLoaded", function () {
   //   delay: 2,
   // });
 });
-
-//// PORTFOLIO SLIDER /////
 document.addEventListener("DOMContentLoaded", (event) => {
-  const mm = gsap.matchMedia();
+  ///// SINGLE ANIMATIONS /////
+  gsap.registerPlugin(ScrollTrigger);
 
-  mm.add("(min-width: 821px)", () => {
-    ///// SLIDER GALERIA /////
-    let items = gsap.utils.toArray(".proyectos-container"),
-      galleryContainer = document.querySelector(".proyectos-main-container");
-
-    items.forEach((container, i) => {
-      let localItems = container.querySelectorAll(".proyectos-item"),
-        distance = () => {
-          let lastItemBounds =
-              localItems[localItems.length - 1].getBoundingClientRect(),
-            containerBounds = container.getBoundingClientRect();
-          return Math.max(0, lastItemBounds.right - containerBounds.right);
-        };
-      gsap.to(container, {
-        x: () => -distance(),
-        ease: "none",
-        scrollTrigger: {
-          trigger: container,
-          start: "-75px top",
-          pinnedContainer: galleryContainer,
-          end: () => "+=" + distance(),
-          pin: galleryContainer,
-          scrub: true,
-          invalidateOnRefresh: true,
-        },
-      });
-    });
+  ///// SPLIT TEXT SETUP /////
+  let typeSplit = new SplitType("[animate]", {
+    types: "lines, words, chars",
+    tagName: "span",
   });
 
-  mm.add("(max-width: 820px)", () => {
-    ///// SLIDER GALERIA MOBILE /////
-    let items = gsap.utils.toArray(".proyectos-container"),
-      galleryContainer = document.querySelector(".proyectos-main-container");
+  ///// SLIDER GALERIA /////
+  let items = gsap.utils.toArray(".proyectos-container"),
+    galleryContainer = document.querySelector(".proyectos-main-container"),
+    titlePanels = gsap.utils.toArray(".proyectos-title"),
+    textContainer = document.querySelector(".proyectos-text-container");
 
-    items.forEach((container, i) => {
-      let localItems = container.querySelectorAll(".proyectos-item"),
-        distance = () => {
-          let lastItemBounds =
-              localItems[localItems.length - 1].getBoundingClientRect(),
-            containerBounds = container.getBoundingClientRect();
-          return Math.max(0, lastItemBounds.right - containerBounds.right);
-        };
-      gsap.to(container, {
-        x: () => -distance(),
-        ease: "none",
-        scrollTrigger: {
-          trigger: container,
-          start: "-200px top", // Ajuste para mobile
-          pinnedContainer: galleryContainer,
-          end: () => "+=" + distance() / 2, // Ajuste para mobile
-          pin: galleryContainer,
-          scrub: true,
-          invalidateOnRefresh: true,
+  items.forEach((container, i) => {
+    let localItems = container.querySelectorAll(".proyectos-item"),
+      distance = () => {
+        let lastItemBounds =
+            localItems[localItems.length - 1].getBoundingClientRect(),
+          containerBounds = container.getBoundingClientRect();
+        return Math.max(0, lastItemBounds.right - containerBounds.right);
+      };
+
+    gsap.to(container, {
+      x: () => -distance(),
+      ease: "none",
+      scrollTrigger: {
+        trigger: container,
+        start: "-150px top",
+        pinnedContainer: galleryContainer,
+        end: () => "+=" + distance() + "700px",
+        pin: galleryContainer,
+        scrub: true,
+        // markers: true,
+        invalidateOnRefresh: true,
+        onUpdate: (self) => {
+          let progress = self.progress * (localItems.length - 1);
+          let activeIndex = Math.round(progress);
+
+          localItems.forEach((item, index) => {
+            if (index === activeIndex) {
+              item.classList.add("proyectos-item-active");
+              if (titlePanels[index]) {
+                titlePanels[index].classList.add("proyectos-title-active");
+
+                // ANIMACIÓN SOLO PARA TEXTOS ACTIVOS
+                // let activeText = titlePanels[index].querySelector("[animate]");
+                // if (activeText) {
+                //   gsap.from(activeText.querySelectorAll(".char"), {
+                //     y: "110%",
+                //     opacity: 1,
+                //     rotationZ: "0",
+                //     duration: 0.35,
+                //     ease: "power1.out",
+                //     stagger: 0.1,
+                //   });
+                // }
+              }
+            } else {
+              item.classList.remove("proyectos-item-active");
+              if (titlePanels[index]) {
+                titlePanels[index].classList.remove("proyectos-title-active");
+              }
+            }
+          });
         },
-      });
+        onEnter: () => {
+          textContainer.classList.remove("proyectos-text-container-inactive");
+        },
+        onLeaveBack: () => {
+          textContainer.classList.add("proyectos-text-container-inactive");
+        },
+        onEnterBack: () => {
+          textContainer.classList.remove("proyectos-text-container-inactive");
+        },
+      },
     });
   });
 });
@@ -286,3 +304,37 @@ function initFooterAnimation() {
 
 // Llamada a la funciÃ³n para inicializar la animaciÃ³n
 initFooterAnimation();
+
+///// TEXT ANIMATION /////
+
+let typeSplit = new SplitType("[animateTitle]", {
+  types: "lines, words, chars",
+  tagName: "span",
+});
+
+gsap.from("[animateTitle] .char", {
+  y: "110%",
+  opacity: 1,
+  rotationZ: "0",
+  duration: 0.35,
+  ease: "power1.out",
+  stagger: 0.1,
+});
+
+let typeSplitText = new SplitType("[animateText]", {
+  types: "lines, words, chars",
+  tagName: "span",
+});
+
+gsap.from("[animateText] .word", {
+  opacity: 0.3,
+  duration: 0.5,
+  ease: "sine.inOut",
+  stagger: 0.1,
+
+  scrollTrigger: {
+    trigger: "[animateText]",
+    start: "-200px center",
+    scrub: true,
+  },
+});

@@ -1,6 +1,52 @@
 .proyectos-main-container {
+  .proyectos-text-container {
+    transition: 300ms all;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    .proyecto-content {
+      position: absolute;
+      z-index: 5;
+      bottom: -64px;
+      left: 124px;
+      h3 {
+        color: $white-color;
+        transform: translateY(-150px);
+        opacity: 0;
+        transition: 300ms all;
+        font-size: 164px;
+        font-weight: bold;
+        line-height: 164px;
+      }
+      a {
+        margin-top: 64px;
+        display: flex;
+        font-size: 24px;
+        text-transform: uppercase;
+        color: $white-color;
+        opacity: 0;
+        transition: 300ms all;
+      }
+    }
+    .proyectos-title-active {
+      h3 {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      a {
+        opacity: 1;
+      }
+    }
+  }
+
+  .proyectos-text-container-inactive {
+    position: relative;
+    opacity: 0;
+    pointer-events: none;
+  }
+
   .rotate-container {
-    transform: rotate(10deg);
+    transform: rotate(6deg) skew(160deg);
     .proyectos-container {
       display: flex;
       align-items: center;
@@ -9,50 +55,24 @@
         margin: 32px;
         position: relative;
         cursor: pointer;
+
         .proyectos-image {
+          opacity: 0.25;
           width: auto;
-          height: 60vh;
+          height: 50vh;
           position: relative;
           transition: 300ms all;
           z-index: 1;
+          filter: blur(10px);
         }
-        .proyecto-content {
-          position: absolute;
-          z-index: 2;
-          bottom: 124px;
-          left: 124px;
-          h3 {
-            color: $white-color;
-            transform: translateY(-10px);
-            opacity: 0;
-            transition: 300ms all;
-            font-size: 86px;
-          }
-          a {
-            margin-top: 64px;
-            display: flex;
-            font-size: 24px;
-            text-transform: uppercase;
-            color: $white-color;
-            opacity: 0;
-            transition: 300ms all;
-            transform: translateY(-10px);
-          }
-        }
-        &:hover {
-          .proyectos-image {
-            opacity: 0.25;
-          }
-          .proyecto-content {
-            h3 {
-              opacity: 1;
-              transform: translateY(0);
-            }
-            a {
-              opacity: 1;
-              transform: translateY(0);
-            }
-          }
+      }
+
+      .proyectos-item-active {
+        .proyectos-image {
+          filter: initial;
+          transform: scale(1.2);
+          opacity: 1;
+          z-index: 3;
         }
       }
     }

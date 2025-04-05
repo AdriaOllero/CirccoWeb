@@ -43,17 +43,31 @@
         align-items: start;
         justify-content: center;
 
-        h1 {
+        .main {
           font-size: clamp(64px, 12.5vw, 240px);
           color: $white-color;
           line-height: clamp(64px, 10vw, 192px);
         }
-        p {
-          font-size: clamp(16px, 1.042vw, 20px);
-          color: $white-color;
+
+        div {
           max-width: 20%;
-          margin-left: 16px;
-          margin-top: 32px;
+          padding-left: 32px;
+
+          h1 {
+            font-size: 14px;
+            color: $white-color;
+            margin-top: 32px;
+            display: flex;
+            img {
+              margin-right: 16px;
+              width: 15px;
+              height: auto;
+            }
+          }
+          p {
+            font-size: clamp(16px, 1.042vw, 20px);
+            color: $white-color;
+          }
         }
       }
     }
