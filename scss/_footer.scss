@@ -85,6 +85,14 @@ footer {
             color: $white-color;
             font-size: 14px;
           }
+
+          .footer-links {
+            margin-top: 24px;
+            text-align: center;
+            .footer-link {
+              padding-inline: 10px;
+            }
+          }
         }
       }
 

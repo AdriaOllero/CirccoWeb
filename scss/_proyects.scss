@@ -14,9 +14,9 @@
         transform: translateY(-150px);
         opacity: 0;
         transition: 300ms all;
-        font-size: 164px;
+        font-size: clamp(52px, 4.48vw, 164px);
         font-weight: bold;
-        line-height: 164px;
+        line-height: clamp(52px, 4.48vw, 164px);
       }
       a {
         margin-top: 64px;
@@ -81,6 +81,26 @@
 
 @media only screen and (max-width: 820px) {
   .proyectos-main-container {
+    .proyectos-text-container {
+      .proyecto-content {
+        position: absolute;
+        z-index: 5;
+        bottom: -64px;
+        left: 24px;
+        h3 {
+        }
+        a {
+          text-wrap: nowrap;
+        }
+      }
+      .proyectos-title-active {
+        h3 {
+        }
+        a {
+        }
+      }
+    }
+
     .rotate-container {
       .proyectos-container {
         .proyectos-item {
