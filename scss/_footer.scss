@@ -54,12 +54,12 @@ footer {
     overflow: hidden;
     background-color: $white-color;
     h2 {
-      font-size: 700px;
+      font-size: clamp(180px, 45.46vw,700px);
       font-weight: bold;
       color: #070707;
       line-height: 300px;
       text-align: center;
-      transform: translateX(-60px);
+      transform: translateX(-15%);
     }
   }
 }

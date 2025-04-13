@@ -228,7 +228,26 @@ document.addEventListener("DOMContentLoaded", (event) => {
 //// VIDEO ANIMATION ////
 const mm = gsap.matchMedia();
 
-mm.add("(min-width: 768px)", () => {
+mm.add("(max-width: 1480px)", () => {
+  gsap.set(".video-container", { scale: 0.4 });
+
+  gsap.to(".video-container", {
+    scale: 1,
+    ease: "power1.inOut",
+    scrollTrigger: {
+      trigger: ".video-main-container",
+      start: "-150 top",
+      end: "bottom bottom",
+      endTrigger: ".video-main-container",
+      scrub: 1,
+      pin: ".video-container",
+      pinSpacing: false,
+      //markers: true,
+    },
+  });
+});
+
+mm.add("(max-width: 1024px)", () => {
   gsap.set(".video-container", { scale: 0.4 });
 
   gsap.to(".video-container", {
@@ -248,19 +267,19 @@ mm.add("(min-width: 768px)", () => {
 });
 
 mm.add("(max-width: 767px)", () => {
-  // gsap.set(".video-container", { scale: 0.6 }); // Ajuste para mobile
-  // gsap.to(".video-container", {
-  //   scale: 1,
-  //   ease: "power1.inOut",
-  //   scrollTrigger: {
-  //     trigger: ".video-main-container",
-  //     start: "-100 top", // Ajuste para mobile
-  //     end: "bottom bottom",
-  //     scrub: 1,
-  //     pin: ".video-container",
-  //     pinSpacing: false,
-  //   },
-  // });
+  gsap.set(".video-container", { scale: 0.6 }); // Ajuste para mobile
+  gsap.to(".video-container", {
+    scale: 1,
+    ease: "power1.inOut",
+    scrollTrigger: {
+      trigger: ".video-main-container",
+      start: "-100 top", // Ajuste para mobile
+      end: "bottom bottom",
+      scrub: 1,
+      pin: ".video-container",
+      pinSpacing: false,
+    },
+  });
 });
 
 ////// FOTER ANIMATION //////
