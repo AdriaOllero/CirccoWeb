@@ -298,3 +298,9 @@ td {
     clip: rect(37px, 9999px, 43px 0);
   }
 }
+
+@media (max-width: 1024px) {
+  .text-small {
+    max-width: 100%;
+  }
+}

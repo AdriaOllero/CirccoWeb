@@ -25,6 +25,37 @@
     animation-duration: 6s;
   }
 
+  .hero-video-1 {
+    max-width: 35vw;
+    top: 50%;
+    right: 45%;
+    margin-right: -28vw;
+    margin-top: -15vw;
+    position: absolute;
+    width: 100%;
+    opacity: 0.3;
+  }
+  .hero-video-2 {
+    max-width: 35vw;
+    bottom: 15%;
+    left: 45%;
+    margin-left: -28vw;
+    margin-top: -15vw;
+    position: absolute;
+    width: 100%;
+    opacity: 0.7;
+  }
+  .hero-video-3 {
+    max-width: 15vw;
+    bottom: 4%;
+    right: 5%;
+    margin-right: 16vw;
+    margin-top: -15vw;
+    position: absolute;
+    width: 100%;
+    opacity: 1;
+  }
+
   .hero-container {
     width: 100%;
     height: 100dvh;
@@ -34,11 +65,20 @@
     z-index: 2;
     position: relative;
 
+    .bg-deco {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
+      width: 100%;
+      opacity: 0.3;
+    }
+
     .main-title-container {
       display: flex;
       align-items: center;
       justify-content: center;
-      padding-bottom: 10%;
+      padding-bottom: clamp(48px, 6.46vw, 124px);
       .main-title {
         display: flex;
         align-items: start;
@@ -258,6 +298,23 @@
       left: -300px;
       bottom: 0px;
     }
+
+    .hero-video-1 {
+      max-width: 80vw;
+      top: 30%;
+      right: 75%;
+    }
+    .hero-video-2 {
+      max-width: 80vw;
+      bottom: 35%;
+      left: 75%;
+    }
+    .hero-video-3 {
+      max-width: 35vw;
+      bottom: 15%;
+      right: 35%;
+    }
+
     .hero-container {
       .main-title-container {
         padding-bottom: 20%;
@@ -302,7 +359,7 @@
   .hero-main-container {
     .hero-container {
       .main-title-container {
-        padding-bottom: 25%;
+        padding-bottom: 40%;
         .main-title {
         }
       }

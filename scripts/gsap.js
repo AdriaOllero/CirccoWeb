@@ -4,26 +4,26 @@ gsap.registerPlugin(TextPlugin);
 //// SINGLE ANIMATIONS /////
 document.addEventListener("DOMContentLoaded", function () {
   // Configurar todos los elementos en su posición inicial
-  gsap.set(".services-link", { x: 1500 });
-
-  // Seleccionar todas las secciones de servicios y animarlas con un bucle
-  const services = ["estrategia", "branding", "web", "social"];
-
-  services.forEach((service, index) => {
-    gsap.to(`.${service}`, {
-      scrollTrigger: {
-        scrub: 1 + index * 2, // Hace que cada animación tenga un scrub progresivo
-        trigger: ".services-main-container",
-        start: "-2500 top", // Ajuste para que la animación inicie antes
-        end: "bottom top",
-        // markers: true, // Descomentar para depuración
-      },
-      x: 0,
-      opacity: 1, // Añadir efecto de aparición gradual
-      ease: "power2.out", // Suaviza la animación
-      delay: index * 2, // Pequeño retraso entre elementos
-    });
-  });
+  //gsap.set(".services-link", { x: 1500 });
+  //
+  //// Seleccionar todas las secciones de servicios y animarlas con un bucle
+  //const services = ["estrategia", "branding", "web", "social"];
+  //
+  //services.forEach((service, index) => {
+  //  gsap.to(`.${service}`, {
+  //    scrollTrigger: {
+  //      scrub: 1 + index * 2, // Hace que cada animación tenga un scrub progresivo
+  //      trigger: ".services-main-container",
+  //      start: "-2500 top", // Ajuste para que la animación inicie antes
+  //      end: "bottom top",
+  //      // markers: true, // Descomentar para depuración
+  //    },
+  //    x: 0,
+  //    opacity: 1, // Añadir efecto de aparición gradual
+  //    ease: "power2.out", // Suaviza la animación
+  //    delay: index * 2, // Pequeño retraso entre elementos
+  //  });
+  //});
 
   //// TEXTOS ////
   gsap.set(".about-left", {
