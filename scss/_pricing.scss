@@ -1,0 +1,57 @@
+.pricing-main-container {
+  .pricing-container {
+    .pricing-intro {
+      max-width: 60%;
+      margin: 0 auto;
+      padding-bottom: 86px;
+      .pricing-intro-title {
+        font-size: 64px;
+        color: white;
+        text-align: center;
+      }
+
+      p {
+        color: white;
+      }
+    }
+
+    .text-large {
+      font-size: 42px;
+    }
+
+    .pricing-table {
+      width: 75%;
+      background-color: #070707;
+      --bs-table-bg: #070707;
+      margin: 0 auto;
+      color: white;
+      thead {
+        border-bottom: 1px solid white;
+        tr {
+          th {
+            color: white;
+            text-transform: uppercase;
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          border-bottom: 1px solid rgb(73, 73, 73);
+          color: white;
+          td {
+            color: white;
+            padding-block: 24px;
+          }
+        }
+      }
+    }
+
+    .disclaimer {
+      margin-top: 64px;
+      width: 100%;
+      color: white;
+      text-align: center;
+    }
+  }
+}

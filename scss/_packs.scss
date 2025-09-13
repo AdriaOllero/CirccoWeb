@@ -1,0 +1,118 @@
+.packs-main-container {
+  .packs-container {
+    position: relative;
+    .packs-nav {
+      position: sticky;
+      max-width: 75%;
+      top: 124px;
+      z-index: 2;
+
+      ul {
+        list-style: none;
+        padding-left: initial;
+        li {
+          a {
+            text-transform: uppercase;
+            color: white;
+            font-size: 20px;
+            padding-block: 12px;
+            border-bottom: 1px solid rgb(66, 66, 66);
+            text-decoration: none;
+            display: block;
+            transition: 300ms all;
+            padding-inline: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            img {
+              width: 15px;
+              margin-right: 24px;
+              opacity: 0;
+              transition: 300ms all;
+            }
+
+            &:hover {
+              background-color: rgb(29, 29, 29);
+              img {
+                margin-right: initial;
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .packs-item {
+      padding-block: 124px;
+      border-bottom: 1px solid gray;
+      h2 {
+        font-size: 36px;
+        color: white;
+        margin-bottom: 24px;
+        span {
+          font-size: 20px;
+          color: gray;
+        }
+      }
+
+      .packs-price {
+        font-size: 86px;
+        color: white;
+        font-weight: bold;
+        span {
+          margin-left: 16px;
+          font-size: 20px;
+          color: gray;
+        }
+      }
+
+      p {
+        font-size: 24px;
+        color: rgb(167, 167, 167);
+
+        b {
+          color: white;
+        }
+      }
+
+      .packs-info {
+        margin-top: 48px;
+
+        h3 {
+          font-size: 20px;
+          color: gray;
+          margin-bottom: 32px;
+        }
+
+        .packs-info-item {
+          padding: 32px;
+          border-radius: 24px;
+          border: 1px solid rgb(59, 59, 59);
+          margin-bottom: 24px;
+
+          .packs-info-number {
+            color: gray;
+            font-size: 18px;
+            text-transform: uppercase;
+          }
+          .packs-info-title {
+            text-align: end;
+            font-weight: bold;
+            font-size: 56px;
+            color: white;
+            margin-bottom: initial;
+          }
+          .packs-info-extra {
+            font-size: 14px;
+            color: gray;
+            text-align: end;
+            display: block;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
