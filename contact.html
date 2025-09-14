@@ -212,31 +212,40 @@
     <!-- MAIN -->
     <main>
 
-      <!-- INTRO -->
+      <!-- BANNER -->
       <section>
-        <div class="pricing-main-container" style="padding-top: clamp(128px, 13.333vw, 256px);">
+        <div class="pricing-main-container">
+          <!-- VIDEO -->
+          <video class="bg-deco" autoplay playsinline muted loop style="max-width: 55vw; top: 50%; right: 50%; margin-right: -28vw; margin-top: -15vw">
+            <source src="https://circcomedia.com/assets/videos/suscripciones-converted.webm" type="">
+          </video> 
+
+          <!-- TITLE -->
           <div class="main-container">
             <div class="pricing-container">
               <div class="pricing-intro">
                 <h2 class="pricing-intro-title">Tu presencia digital en modo <br> <em>“ <b>ALL INCLUSIVE</b> ”</em></h2>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-              <div class="mt-5">
-                <div class="row">
-                  <div class="col-lg-4">
-                    <h3 class="text-section-title">suscripciones</h3>
-                    <p class="text-small">Aquí no creemos en facturas sorpresa ni en presupuestos que asustan más que un lunes por la mañana. </p>
-                  </div>
-                  <div class="col-lg-8">
-                    <p class="text-large">Por eso hemos creado <b>planes de suscripción</b> que lo incluyen todo: </p>
-                    <p class="text-large">Tu web desde cero, el mantenimiento,
-                      las horas de cambios mensuales y hasta la gestión de tus redes sociales o campañas online (según el pack que elijas).
-                    </p>
-                  </div>
-                </div>
+      <!-- INFO -->
+      <section>
+        <div class="about-main-container">
+          <div class="about-container main-container">
+            <div class="row">
+              <div class="col-lg-4">
+                <h3 class="text-section-title">suscripciones</h3>
+                <p class="text-small">Aquí no creemos en facturas sorpresa ni en presupuestos que asustan más que un lunes por la mañana. </p>
               </div>
-
-
+              <div class="col-lg-8">
+                <p class="text-large">Por eso hemos creado <b>planes de suscripción</b> que lo incluyen todo: </p>
+                <p class="text-large">Tu web desde cero, el mantenimiento,
+                  las horas de cambios mensuales y hasta la gestión de tus redes sociales o campañas online (según el pack que elijas).
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -244,7 +253,7 @@
 
       <!-- TABS -->
       <div class="interiorServices-main-container">
-        <div class="main-container">
+        <div class="main-container gPadd">
           <div class="interiorServices-container">
             <div class="interiorServices-item">
               <div title="Estrategia Digital para Marcas | CirccoMedia">
@@ -279,25 +288,10 @@
       </div>
 
 
-      <!-- TABS -->
-      <!-- <section>
-        <div class="packs-main-container">
-          <div class="main-container gPadd">
-            <div class="packs-container" style="width: 100%; display: flex; align-items: center; justify-content: center;">
-
-              <a class="mx-5" href="" style="text-decoration:none; color: white; padding: 12px 32px;border-radius: 100px; background-color: rgba(255, 255, 255, 0.075);">Suscripción mensual</a>
-
-              <a class="mx-5" href="" style="text-decoration:none;color: white">Pago único</a>
-            </div>
-          </div>
-        </div>
-      </section> -->
-
-
       <!-- STARTER WEB -->
       <section>
         <div class="packs-main-container">
-          <div class="main-container gPadd">
+          <div class="main-container">
             <div class="packs-container">
                 <div class="row">
                   <div class="col-lg-4">
@@ -660,17 +654,25 @@ Perfecto para empresas que buscan un aliado real y no un “chico de las webs”
       </section>
 
 
-      <!-- INTRO -->
-      <section>
-        <div class="pricing-main-container" style="padding-bottom: clamp(128px, 13.333vw, 256px);">
-          <div class="main-container">
-            <div class="pricing-container">
-              <div class="pricing-intro">
-                <h2 class="pricing-intro-title">Compara nuestros <br> <em>“ <b>PLANES</b> ”</em></h2>
-              </div>
+<!-- PLANES TITLE -->
+<section>
+  <div class="pricing-main-container">
+    <div class="main-container">
+      <div class="pricing-container">
+        <div class="pricing-intro">
+          <h2 class="pricing-intro-title">Compara nuestros <br> <em>“ <b>PLANES</b> ”</em></h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-              <div class="mt-5">
-                <table class="pricing-table table" cellpadding="24" cellspacing="20">
+      <!-- PRICING TABLE -->
+      <section>
+        <div class="pricing-table-main-container">
+          <div class="main-container">
+            <div class="pricing-table-container">
+              <table class="pricing-table table" cellpadding="24" cellspacing="20">
                   <thead>
                     <tr>
                       <th>Característica</th>
@@ -683,94 +685,90 @@ Perfecto para empresas que buscan un aliado real y no un “chico de las webs”
                   <tbody>
                     <tr>
                       <td><b>Web a medida</b></td>
-                      <td>Incluida</td>
-                      <td>Incluida</td>
-                      <td>Incluida</td>
-                      <td>Incluida + proyectos avanzados</td>
+                      <td data-label="🚀 Starter">Incluida</td>
+                      <td data-label="💼 Business Partners">Incluida</td>
+                      <td data-label="📱 Digital Growth">Incluida</td>
+                      <td data-label="🌐 Full Digital Partner">Incluida + proyectos avanzados</td>
                     </tr>
                     <tr>
                       <td><b>Mantenimiento mensual</b></td>
-                      <td>✔️</td>
-                      <td>✔️</td>
-                      <td>✔️</td>
-                      <td>Premium</td>
+                      <td data-label="🚀 Starter">✔️</td>
+                      <td data-label="💼 Business Partners">✔️</td>
+                      <td data-label="📱 Digital Growth">✔️</td>
+                      <td data-label="🌐 Full Digital Partner">Premium</td>
                     </tr>
                     <tr>
                       <td><b>Horas de cambios web anuales</b></td>
-                      <td>36 h/año</td>
-                      <td>60 h/año</td>
-                      <td>96 h/año</td>
-                      <td>144 h/año</td>
+                      <td data-label="🚀 Starter">36 h/año</td>
+                      <td data-label="💼 Business Partners">60 h/año</td>
+                      <td data-label="📱 Digital Growth">96 h/año</td>
+                      <td data-label="🌐 Full Digital Partner">144 h/año</td>
                     </tr>
                     <tr>
                       <td><b>Horas totales por permanencia</b></td>
-                      <td>108 h/contrato</td>
-                      <td>120 h/contrato</td>
-                      <td>96 h/contrato</td>
-                      <td>72 h/contrato</td>
+                      <td data-label="🚀 Starter">108 h/contrato</td>
+                      <td data-label="💼 Business Partners">120 h/contrato</td>
+                      <td data-label="📱 Digital Growth">96 h/contrato</td>
+                      <td data-label="🌐 Full Digital Partner">72 h/contrato</td>
                     </tr>
                     <tr>
                       <td><b>Permanencia</b></td>
-                      <td>36 meses</td>
-                      <td>24 meses</td>
-                      <td>12 meses</td>
-                      <td>6 meses</td>
+                      <td data-label="🚀 Starter">36 meses</td>
+                      <td data-label="💼 Business Partners">24 meses</td>
+                      <td data-label="📱 Digital Growth">12 meses</td>
+                      <td data-label="🌐 Full Digital Partner">6 meses</td>
                     </tr>
                     <tr>
                       <td><b>Gestión redes sociales</b></td>
-                      <td>✔️</td>
-                      <td>✔️</td>
-                      <td>✔️</td>
-                      <td>Total + estrategia personalizada</td>
+                      <td data-label="🚀 Starter">✔️</td>
+                      <td data-label="💼 Business Partners">✔️</td>
+                      <td data-label="📱 Digital Growth">✔️</td>
+                      <td data-label="🌐 Full Digital Partner">Total + estrategia personalizada</td>
                     </tr>
                     <tr>
                       <td><b>Campañas (Google / Meta / TikTok)</b></td>
-                      <td>❌</td>
-                      <td>❌</td>
-                      <td>Incluidas</td>
-                      <td>Avanzadas</td>
+                      <td data-label="🚀 Starter">❌</td>
+                      <td data-label="💼 Business Partners">❌</td>
+                      <td data-label="📱 Digital Growth">Incluidas</td>
+                      <td data-label="🌐 Full Digital Partner">Avanzadas</td>
                     </tr>
                     <tr>
                       <td><b>Foto / Vídeo profesional</b></td>
-                      <td>❌</td>
-                      <td>Incluido</td>
-                      <td>Incluido</td>
-                      <td>Premium</td>
+                      <td data-label="🚀 Starter">❌</td>
+                      <td data-label="💼 Business Partners">Incluido</td>
+                      <td data-label="📱 Digital Growth">Incluido</td>
+                      <td data-label="🌐 Full Digital Partner">Premium</td>
                     </tr>
                     <tr>
                       <td><b>Desarrollo apps / proyectos especiales</b></td>
-                      <td>❌</td>
-                      <td>❌</td>
-                      <td>❌</td>
-                      <td>✔️</td>
+                      <td data-label="🚀 Starter">❌</td>
+                      <td data-label="💼 Business Partners">❌</td>
+                      <td data-label="📱 Digital Growth">❌</td>
+                      <td data-label="🌐 Full Digital Partner">✔️</td>
                     </tr>
                     <tr>
                       <td><b>Soporte prioritario</b></td>
-                      <td>❌</td>
-                      <td>Normal</td>
-                      <td>Rápido</td>
-                      <td>VIP (directo con nosotros)</td>
+                      <td data-label="🚀 Starter">❌</td>
+                      <td data-label="💼 Business Partners">Normal</td>
+                      <td data-label="📱 Digital Growth">Rápido</td>
+                      <td data-label="🌐 Full Digital Partner">VIP (directo con nosotros)</td>
                     </tr>
                     <tr>
                       <td><b>Precio mensual aprox.</b></td>
-                      <td><b>120€</b></td>
-                      <td><b>180€</b></td>
-                      <td><b>360€</b></td>
-                      <td><b>600€</b></td>
+                      <td data-label="🚀 Starter"><b>120€</b></td>
+                      <td data-label="💼 Business Partners"><b>180€</b></td>
+                      <td data-label="📱 Digital Growth"><b>360€</b></td>
+                      <td data-label="🌐 Full Digital Partner"><b>600€</b></td>
                     </tr>
                   </tbody>
                 </table>
                 <p class="disclaimer">
                   *Todos los precios sin IVA.
                 </p>
-              </div>
-
-
             </div>
           </div>
         </div>
       </section>
-
 
 
     </main>

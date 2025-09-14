@@ -135,9 +135,12 @@
         }
         .interiorServices-content {
           .interiorServices-content-title {
+            display: flex;
+            flex-direction: column;
             img {
               max-width: 30px;
-              margin-right: 16px;
+              margin-right: initial;
+              margin-bottom: 24px;
             }
           }
         }

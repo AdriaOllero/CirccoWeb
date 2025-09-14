@@ -58,7 +58,7 @@
       }
 
       .packs-price {
-        font-size: 86px;
+        font-size: clamp(64px, 4.479vw, 86px);
         color: white;
         font-weight: bold;
         span {
@@ -111,6 +111,22 @@
             display: block;
             width: 100%;
           }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .packs-main-container {
+    .packs-container {
+      .packs-nav {
+        max-width: 100%;
+        top: 0;
+      }
+
+      .packs-item {
+        .packs-price {
         }
       }
     }

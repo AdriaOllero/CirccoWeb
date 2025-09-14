@@ -1,11 +1,35 @@
 .pricing-main-container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+
+  .bg-deco {
+    max-width: 55vw;
+    top: 50%;
+    right: 50%;
+    margin-right: -28vw;
+    margin-top: -15vw;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    opacity: 0.3;
+  }
+  .main-container {
+    height: 100%;
+  }
   .pricing-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 5;
     .pricing-intro {
       max-width: 60%;
       margin: 0 auto;
-      padding-bottom: 86px;
       .pricing-intro-title {
-        font-size: 64px;
+        font-size: clamp(32px, 3.333vw, 64px);
         color: white;
         text-align: center;
       }
@@ -18,7 +42,11 @@
     .text-large {
       font-size: 42px;
     }
+  }
+}
 
+.pricing-table-main-container {
+  .pricing-table-container {
     .pricing-table {
       width: 75%;
       background-color: #070707;
@@ -53,5 +81,54 @@
       color: white;
       text-align: center;
     }
+  }
+}
+
+@media (max-width: 1024px) {
+  .pricing-main-container {
+    height: 65vh;
+    .pricing-container {
+      .pricing-intro {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .pricing-table-main-container {
+    .pricing-table-container {
+      .pricing-table {
+        width: 100%;
+      }
+    }
+  }
+
+  .pricing-table thead {
+    display: none; /* ocultamos la cabecera */
+  }
+
+  .pricing-table,
+  .pricing-table tbody,
+  .pricing-table tr,
+  .pricing-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .pricing-table tr {
+    margin-bottom: 20px;
+  }
+
+  .pricing-table td {
+    text-align: left;
+    padding: 8px;
+    position: relative;
+  }
+
+  .pricing-table td::before {
+    content: attr(data-label); /* toma el valor del th */
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #444;
   }
 }
